@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body >
+    <header>
+        <!-- Navbar -->
+        <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-green-800 shadow-lg">
+            <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+                <a href="#top" class="text-white font-semibold text-2xl">Almaa Combo Site</a>
+                <ul class="hidden md:flex space-x-8 text-white font-medium">
+                    <li><a href="#" class="hover:text-green-300 transition">Home</a></li>
+                    <li><a href="#product" class="hover:text-green-300 transition">About</a></li>
+                    <li><a href="#" class="hover:text-green-300 transition">Benefits</a></li>
+                    <li><a href="#" class="hover:text-green-300 transition">Contact</a></li>
+                </ul>
+                <button class="md:hidden text-white text-2xl" id="menuBtn">☰</button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="md:hidden overflow-hidden max-h-0 opacity-0 scale-95 transition-all duration-500 ease-in-out bg-green-900 px-6">
+                <a class="block py-2 text-white text-center" href="#">Home</a>
+                <a class="block py-2 text-white text-center" href="#product">Product</a>
+                <a class="block py-2 text-white text-center" href="#">Benefits</a>
+                <a class="block py-2 text-white text-center" href="#">Contact</a>
+            </div>
+        </nav>
+    </header>
+<section id="checkout" class="py-32 bg-gradient-to-b from-green-50 to-white pb-40">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl md:text-4xl font-bold mb-3">buy Now</h2>
+            <p class="text-gray-600">Secure & easy ordering</p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <!-- CUSTOMER FORM -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+
+                <h3 class="text-xl font-semibold mb-6 text-green-800">Customer Details</h3>
+
+                <div class="space-y-6">
+
+                    <input id="name" type="text" placeholder="Full Name" class="checkout-input">
+
+                    <input id="mobile" type="tel" placeholder="Mobile Number" class="checkout-input">
+
+                    <!-- DISTRICT -->
+                    <select id="district" class="checkout-input">
+                        <option value="">Select District</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Coimbatore">Coimbatore</option>
+                        <option value="Madurai">Madurai</option>
+                        <option value="Salem">Salem</option>
+                        <option value="Trichy">Trichy</option>
+                        <option value="Tirunelveli">Tirunelveli</option>
+                        <option value="Erode">Erode</option>
+                        <option value="Vellore">Vellore</option>
+                    </select>
+
+                    <!-- PINCODE -->
+                    <input id="pincode" type="number" placeholder="Pincode"
+                        class="checkout-input" onblur="checkShipping()">
+
+                    <textarea id="address" rows="4"
+                        placeholder="House no, street, area"
+                        class="checkout-input"></textarea>
+
+                </div>
+
+
+            </div>
+            <!-- ORDER SUMMARY -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+
+                <h3 class="text-xl font-semibold mb-6 text-green-800">Order Summary</h3>
+
+                <!-- PRODUCT -->
+                <div class="flex justify-between items-center mb-6">
+                    <div >
+                        <h4 class="font-semibold text-sm">Arthritis Pain Relief Combo</h4>
+                        <p class="text-sm text-gray-500">Herbal Combo Pack</p>
+                    </div>
+                    <span class="font-medium px-5">₹<span id="productPrice">2015</span></span>
+                </div>
+
+                <!-- QUANTITY -->
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="font-medium">Quantity</span>
+                    <div class="flex border rounded-full overflow-hidden">
+                        <button onclick="updateQty(-1)" class="qty-btn">−</button>
+                        <span id="qty" class="px-3 py-2">1</span>
+                        <button onclick="updateQty(1)" class="qty-btn">+</button>
+                    </div>
+                </div>
+
+                <!-- PAYMENT -->
+                <div class="mb-6">
+                    <p class="font-medium mb-3">Payment Method</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 ">
+                        <button onclick="selectPayment('cod')" id="codBtn" class="payment-btn active">
+                            Cash on Delivery
+                        </button>
+                        <button onclick="selectPayment('online')" id="onlineBtn" class="payment-btn">
+                            Online Payment
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PRICE -->
+                <div class="space-y-4 border-t pt-4">
+                    <div class="flex justify-between">
+                        <span>Subtotal</span>
+                        <span>₹<span id="subtotal">2015</span></span>
+                    </div>
+
+                    <div class="flex justify-between">
+                        <span>Shipping</span>
+                        <span>₹<span id="shipping">50</span></span>
+                    </div>
+
+                    <div class="flex justify-between font-semibold text-lg border-t pt-4 text-green-800">
+                        <span>Total</span>
+                        <span>₹<span id="total">2065</span></span>
+                    </div>
+                </div>
+
+                <!-- DESKTOP CTA -->
+                <button onclick="placeOrder()" class="hidden lg:block w-full mt-8 py-4 rounded-xl bg-green-700 text-white font-semibold text-lg hover:bg-green-800 transition">
+                    Place Order
+                </button>
+
+            </div>
+        </div>
+        <div class="fixed bottom-0 left-0 right-0 bg-white shadow-2xl p-4 flex justify-between items-center lg:hidden z-50">
+            <div>
+                <p class="text-sm text-gray-500">Total</p>
+                <p class="text-lg font-bold text-green-800">₹<span id="mobileTotal">2065</span></p>
+            </div>
+            <button onclick="placeOrder()"
+                class="px-8 py-3 bg-green-700 text-white font-semibold rounded-full hover:bg-green-800 animate-pulse">
+                Place Order
+            </button>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="bg-green-900 text-green-100 py-10">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold">OrganicLife</h3>
+        <p class="text-sm mt-2">Inspired by nature, perfected by tradition.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Quick Links</h4>
+        <a class="block text-sm hover:text-white" href="#">Home</a>
+        <a class="block text-sm hover:text-white" href="#product">Product</a>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Contact</h4>
+        <p class="text-sm">info@organiclife.com</p>
+        <p class="text-sm">+91 98765 43210</p>
+      </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
