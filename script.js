@@ -102,7 +102,23 @@ document.querySelectorAll('.animate-slideIn').forEach(el => {
 
   startAutoSlide();
 
+  let qty = 1;
+  const qtyElement = document.getElementById("qty");
+  const buttons = document.querySelectorAll(".qty-btn");
 
+  // quantity updation
+  function updateQty(change) {
+    qty += change;
+    if (qty < 1) qty = 1;
+
+    qtyElement.textContent = qty;
+
+    // disable minus button
+    buttons[0].disabled = qty === 1;
+  }
+
+  // initialize state
+  buttons[0].disabled = true;
 
 
   // FAQ Section Java Script
@@ -120,25 +136,6 @@ document.querySelectorAll('.animate-slideIn').forEach(el => {
       item.classList.toggle("active");
     });
   });
-
-  // testimonial java script
-
- 
-  const wrapper = document.getElementById("testimonialWrapper");
-  let scrollPos = 0;
-
-  setInterval(() => {
-    scrollPos += 320;
-    if (scrollPos >= wrapper.scrollWidth - wrapper.clientWidth) {
-      scrollPos = 0;
-    }
-    wrapper.scrollTo({
-      left: scrollPos,
-      behavior: "smooth"
-    });
-  }, 4000);
-
-
 // Back to top btn js 
 const backToTop = document.getElementById("backToTop");
 
@@ -158,53 +155,5 @@ const backToTop = document.getElementById("backToTop");
     });
   });
 
-// Buy page java script
 
 
-  const price = 2015;
-  const shipping = 50;
-  let qty = 1;
-  let payment = "cod";
-
-  function updateQty(val) {
-    qty = Math.max(1, qty + val);
-    document.getElementById("qty").innerText = qty;
-    calculateTotal();
-  }
-
-  function calculateTotal() {
-    const subtotal = price * qty;
-    const total = subtotal + shipping;
-
-    document.getElementById("subtotal").innerText = subtotal;
-    document.getElementById("total").innerText = total;
-    document.getElementById("mobileTotal").innerText = total;
-  }
-
-  function selectPayment(type) {
-    payment = type;
-    document.getElementById("codBtn").classList.toggle("active", type === "cod");
-    document.getElementById("onlineBtn").classList.toggle("active", type === "online");
-  }
-
-  function placeOrder() {
-    const name = document.getElementById("name").value.trim();
-    const mobile = document.getElementById("mobile").value.trim();
-    const address = document.getElementById("address").value.trim();
-
-    if (!name || !mobile || !address) {
-      alert("Please fill all details");
-      return;
-    }
-
-    if (!/^[6-9]\d{9}$/.test(mobile)) {
-      alert("Enter a valid mobile number");
-      return;
-    }
-
-    alert(
-      `Order placed successfully!\nPayment: ${payment.toUpperCase()}\nQuantity: ${qty}`
-    );
-  }
-
-  calculateTotal();
