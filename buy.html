@@ -7,14 +7,39 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <script>
+            tailwind.config = {
+            theme: {
+                extend: {
+                colors: {
+                    primary: "#0A764C",
+                    secondary: "#0CC07B",
+                    darkhead: "#3D7E01",
+                    headtext:"#254B01",
+
+                },
+                fontFamily: {
+                    heading: [ "SN Pro", "sans-serif"],
+                    body: ["SN Pro"," sans-serif"],
+                    subheading:["Playfair Display", "serif"]
+                },
+                }
+            }
+            }
+        </script>
 </head>
-<body >
+<body class="bg-green-50 font-body">
     <header>
         <!-- Navbar -->
-        <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-green-800 shadow-lg">
+        <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-primary shadow-lg">
             <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-                <a href="#top" class="text-white font-semibold text-2xl">Almaa Combo Site</a>
+                <a href="#home" class="">
+                    <img src="./assets/Almaa Herbal Logo_Without TM.png" alt="" class="md:w-24 w-20 ">
+                </a>
                 <ul class="hidden md:flex space-x-8 text-white font-medium">
                     <ul class="hidden md:flex space-x-8 text-white font-medium">
                     <li><a href="./index.html#home" class="nav-text relative">Home</a></li>
@@ -31,24 +56,30 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="md:hidden overflow-hidden max-h-0 opacity-0 scale-95 transition-all duration-500 ease-in-out bg-green-900 px-6">
-                <a class="block py-2 text-white text-center" href="./index.html#home">Home</a>
-                <a class="block py-2 text-white text-center" href="./index.html#about">About</a>
-                <a class="block py-2 text-white text-center" href="./index.html#benefits">Benefits</a>
-                <a class="block py-2 text-white text-center" href="./index.html#ingredients">Ingredients</a>
-                <a class="block py-2 text-white text-center" href="./index.html#product">Product</a>
-                <a class="block py-2 text-white text-center" href="./index.html#how-to-use">How To Use</a>
-                <a class="block py-2 text-white text-center" href="./index.html#faq">FAQ</a>
-                <a class="block py-2 text-white text-center" href="./index.html#testimonials">Testimonial</a>
+            <div id="mobileMenu" class="md:hidden overflow-hidden max-h-0 opacity-0 scale-95 transition-all duration-500 ease-in-out  px-6">
+                <a class="block py-2 text-white text-center bg-primary border border-primary hover:scale-105 hover:bg-white hover:text-primary hover:rounded-xl hoverEffect rounded-t-xl" href="#home">Home</a>
+                <a class="block py-2 text-white text-center bg-primary border border-primary hover:scale-105 hover:bg-white hover:text-primary hover:rounded-xl hoverEffect" href="#about">About</a>
+                <a class="block py-2 text-white text-center bg-primary border border-primary hover:scale-105 hover:bg-white hover:text-primary hover:rounded-xl hoverEffect" href="#benefits">Benefits</a>
+                <a class="block py-2 text-white text-center bg-primary border border-primary hover:scale-105 hover:bg-white hover:text-primary hover:rounded-xl hoverEffect" href="#ingredients">Ingredients</a>
+                <a class="block py-2 text-white text-center bg-primary border border-primary hover:scale-105 hover:bg-white hover:text-primary hover:rounded-xl hoverEffect" href="#product">Product</a>
+                <a class="block py-2 text-white text-center bg-primary border border-primary hover:scale-105 hover:bg-white hover:text-primary hover:rounded-xl hoverEffect" href="#how-to-use">How To Use</a>
+                <a class="block py-2 text-white text-center bg-primary border border-primary hover:scale-105 hover:bg-white hover:text-primary hover:rounded-xl hoverEffect" href="#faq">FAQ</a>
+                <a class="block py-2 text-white text-center bg-primary border border-primary hover:scale-105 hover:bg-white hover:text-primary hover:rounded-xl hoverEffect rounded-b-xl" href="#testimonials">Testimonial</a>
             </div>
         </nav>
     </header>
 <section id="checkout" class="py-32 bg-gradient-to-b from-green-50 to-white pb-40">
     <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-5xl md:text-4xl font-bold mb-3">buy Now</h2>
-            <p class="text-gray-600">Secure & easy ordering</p>
-        </div>
+        <!-- Heading -->
+            <div class="flex flex-col items-center mb-5">
+                <div class="flex justify-center items-center gap-3">
+                    <div class="w-[50px] h-[3px] bg-primary rounded-2xl "></div>
+                    <h2 class="text-3xl md:text-5xl font-bold md:mb-3 font-heading">buy Now</h2>
+                    <div class="w-[50px] h-[3px] bg-primary rounded-2xl "></div>
+                    
+                </div>
+                <p class="text-gray-600">Secure & easy ordering</p>
+            </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <!-- CUSTOMER FORM -->
             <div class="bg-white p-8 rounded-2xl shadow-lg">
@@ -94,10 +125,10 @@
                 <!-- PRODUCT -->
                 <div class="flex justify-between items-center mb-6">
                     <div >
-                        <h4 class="font-semibold text-sm">Arthritis Pain Relief Combo</h4>
+                        <h4 class="font-semibold text-sm">ALMAA ULCER CARE COMBO </h4>
                         <p class="text-sm text-gray-500">Herbal Combo Pack</p>
                     </div>
-                    <span class="font-medium px-5">₹<span id="productPrice">2015</span></span>
+                    <span class="font-medium px-5">₹<span id="productPrice">2107.00</span></span>
                 </div>
 
                 <!-- QUANTITY -->
@@ -114,10 +145,10 @@
                 <div class="mb-6">
                     <p class="font-medium mb-3">Payment Method</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 ">
-                        <button onclick="selectPayment('cod')" id="codBtn" class="payment-btn active">
+                        <button onclick="selectPayment('cod')" id="codBtn" class="payment-btn active hover:bg-green-600 hover:text-white">
                             Cash on Delivery
                         </button>
-                        <button onclick="selectPayment('online')" id="onlineBtn" class="payment-btn">
+                        <button onclick="selectPayment('online')" id="onlineBtn" class="payment-btn hover:bg-green-600 hover:text-white">
                             Online Payment
                         </button>
                     </div>
@@ -127,22 +158,22 @@
                 <div class="space-y-4 border-t pt-4">
                     <div class="flex justify-between">
                         <span>Subtotal</span>
-                        <span>₹<span id="subtotal">2015</span></span>
+                        <span>₹<span id="subtotal">2107.00</span></span>
                     </div>
 
                     <div class="flex justify-between">
                         <span>Shipping</span>
-                        <span>₹<span id="shipping">50</span></span>
+                        <span>₹<span id="shipping">0</span></span>
                     </div>
 
                     <div class="flex justify-between font-semibold text-lg border-t pt-4 text-green-800">
                         <span>Total</span>
-                        <span>₹<span id="total">2065</span></span>
+                        <span>₹<span id="total">2107.00</span></span>
                     </div>
                 </div>
 
                 <!-- DESKTOP CTA -->
-                <button onclick="placeOrder()" class="hidden lg:block w-full mt-8 py-4 rounded-xl bg-green-700 text-white font-semibold text-lg hover:bg-green-800 transition">
+                <button onclick="placeOrder()" class="hidden lg:block w-full mt-8 py-4 rounded-xl border border-green-700 bg-green-700 text-white font-semibold text-lg hover:bg-white hover:text-black hover:border hoverEffect transition">
                     Place Order
                 </button>
 
@@ -151,61 +182,93 @@
         <div class="fixed bottom-0 left-0 right-0 bg-white shadow-2xl p-4 flex justify-between items-center lg:hidden z-50">
             <div>
                 <p class="text-sm text-gray-500">Total</p>
-                <p class="text-lg font-bold text-green-800">₹<span id="mobileTotal">2065</span></p>
+                <p class="text-lg font-bold text-green-800">₹<span id="mobileTotal">2107.00</span></p>
             </div>
             <button onclick="placeOrder()"
-                class="px-8 py-3 bg-green-700 text-white font-semibold rounded-full hover:bg-green-800 animate-pulse">
+                class="px-8 py-3 bg-green-700 border border-green-700 text-white font-semibold rounded-full hover:bg-white hover:text-black hover:border animate-pulse">
                 Place Order
             </button>
         </div>
     </div>
 </section>
-<!-- Footer -->
-<footer class="bg-green-900 text-green-100 py-10">
+<footer class="bg-primary text-green-100 py-10">
     <div class="max-w-7xl mx-auto px-6 ">
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div class=" p-3">
                 <h4 class="font-semibold mb-5 text-xl text-white ">Quick Links</h4>
-                <ul class="grid grid-cols-2 gap-1">
-                    <li><a href="#home" class=" nav-text relative">Home</a></li>
-                    <li><a href="#about" class="nav-text relative">About</a></li>
-                    <li><a href="#benefits" class="nav-text relative">Benefits</a></li>
-                    <li><a href="#ingredients" class="nav-text relative">Ingredients</a></li>
-                    <li><a href="#products" class="nav-text relative">Products</a></li>
-                    <li><a href="#how-to-use" class="nav-text relative">How To Use</a></li>
-                    <li><a href="#faq" class="nav-text relative">FAQ</a></li>
-                    <li><a href="#testimonials" class="nav-text relative">Testimonial</a></li>
+                <ul class="grid grid-cols-2 gap-2">
+                    <li class="hover:text-white hover:scale-105 hoverEffect"><a href="./index.html#home" class="text-sm md:text-base ">Home</a></li>
+                    <li class="hover:text-white hover:scale-105 hoverEffect"><a href="./index.html#about" class="text-sm md:text-base ">About</a></li>
+                    <li class="hover:text-white hover:scale-105 hoverEffect"><a href="./index.html#benefits" class="text-sm md:text-base ">Benefits</a></li>
+                    <li class="hover:text-white hover:scale-105 hoverEffect"><a href="./index.html#ingredients" class="text-sm md:text-base ">Ingredients</a></li>
+                    <li class="hover:text-white hover:scale-105 hoverEffect"><a href="./index.html#products" class="text-sm md:text-base ">Products</a></li>
+                    <li class="hover:text-white hover:scale-105 hoverEffect"><a href="./index.html#how-to-use" class="text-sm md:text-base ">How To Use</a></li>
                 </ul>
+            </div>
+            <div class="p-3">
+                <h4 class="font-semibold mb-5 text-xl text-white ">Policies</h4>
+                <div class="">
+                    <a href="https://www.almaherbal.com/shipping-policy" target="_blank" class="text-sm md:text-base  flex gap-1 items-center hover:text-white hover:scale-105 hoverEffect mb-2">Shipping
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M240-192q-50 0-85-35t-35-85H48v-408q0-29.7 21.15-50.85Q90.3-792 120-792h552v144h120l120 168v168h-72q0 50-35 85t-85 35q-50 0-85-35t-35-85H360q0 50-35 85t-85 35Zm0-72q20.4 0 34.2-13.8Q288-291.6 288-312q0-20.4-13.8-34.2Q260.4-360 240-360q-20.4 0-34.2 13.8Q192-332.4 192-312q0 20.4 13.8 34.2Q219.6-264 240-264ZM120-384h24q17-23 42-35.5t54-12.5q29 0 54 12.5t41.53 35.5H600v-336H120v336Zm600 120q20.4 0 34.2-13.8Q768-291.6 768-312q0-20.4-13.8-34.2Q740.4-360 720-360q-20.4 0-34.2 13.8Q672-332.4 672-312q0 20.4 13.8 34.2Q699.6-264 720-264Zm-48-192 168-1-85-119h-83v120Zm-310-93Z"/></svg>
+                    </a>
+                    <a href="https://www.almaherbal.com/returns-&-refund-policy" target="_blank" class="text-sm md:text-base  flex gap-1 items-center hover:text-white hover:scale-105 hoverEffect mb-2">
+                        Return & Refund Policy
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="m474-210 102-102-101-102-34 34 42 43q-29 0-56.5-10T378-378q-20-20-31-46.5T336-480q0-16 3-31t9-29l-35-35q-12 22-18.5 45.5T288-480q0 38 14.5 73.5T344-344q29 29 64.5 42.5T484-288l-44 44 34 34Zm173-175q12-22 18.5-45.5T672-480q0-38-15-73.5T615-616q-28-28-65-41.5T474-670l46-46-34-34-102 102 102 102 34-34-44-44q31 0 57.5 10t48.5 32q20 20 31 46.5t11 55.5q0 16-3 31t-9 29l35 35ZM480-96q-79 0-149-30t-122.5-82.5Q156-261 126-331T96-480q0-80 30-149.5t82.5-122Q261-804 331-834t149-30q80 0 149.5 30t122 82.5Q804-699 834-629.5T864-480q0 79-30 149t-82.5 122.5Q699-156 629.5-126T480-96Zm0-72q130 0 221-91t91-221q0-130-91-221t-221-91q-130 0-221 91t-91 221q0 130 91 221t221 91Zm0-312Z"/></svg>
+                    </a>
+                    <a href="https://www.almaherbal.com/terms-&-conditions" target="_blank" class="text-sm md:text-base  flex gap-1 items-center hover:text-white hover:scale-105 hoverEffect mb-2">
+                        Terms & Conditions
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M240-96q-40 0-68-28t-28-68v-144h96v-528h576v660q0 45-31.5 76.5T708-96H240Zm467.79-72q15.21 0 25.71-10.35T744-204v-588H312v456h360v132q0 15.3 10.29 25.65Q692.58-168 707.79-168ZM360-600v-72h336v72H360Zm0 120v-72h336v72H360ZM240-168h360v-96H216v72q0 10.2 6.9 17.1 6.9 6.9 17.1 6.9Zm0 0h-24 384-360Z"/></svg>
+                    </a>
+                    <a href="https://www.almaherbal.com/privacy-policy" target="_blank" class="text-sm md:text-base  flex gap-1 items-center hover:text-white hover:scale-105 hoverEffect mb-2">
+                        Privacy Policy
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M480-96q-136-38-212-160t-76-259v-229l288-120 288 120v229q0 72-22 147t-71 134L553.14-356Q536-345 518-340.5t-38 4.5q-60 0-102-42t-42-102q0-60 42-102t102-42q60 0 102 42t42 102q0 20-5 38.11T604-407l55 55q17-39 27-80t10-83v-181l-216-90-216 90v181q0 105 56.5 203.5T480-171q28-9 51.5-25t44.5-36l51 52q-32 29-68.5 51T480-96Zm.21-312Q510-408 531-429.21t21-51Q552-510 530.79-531t-51-21Q450-552 429-530.79t-21 51Q408-450 429.21-429t51 21Zm-.21-72Z"/></svg>
+                    </a>
+                    
+                </div>
             </div>
             <div class=" p-3">
                 <h4 class="font-semibold mb-5 text-xl text-white">Contact</h4>
                 <p class="text-sm mb-2"> almaahospital@gmail.com</p>
-                <p class="text-sm">+91 90030 00888</p>
+                <p class="text-sm mb-2">+91 7401 403000</p>
+                <a href="https://api.whatsapp.com/send/?phone=%2B917401403037&text&type=phone_number&app_absent=0" class="text-sm flex gap-2 items-center hover:text-white" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="currentColor" class="w-4 h-4 ">
+                        <path d="M20.52 3.48A11.82 11.82 0 0012.05 0C5.43 0 .05 5.38.05 12c0 2.11.55 4.17 1.6 5.99L0 24l6.17-1.62A11.9 11.9 0 0012.05 24C18.67 24 24.05 18.62 24.05 12c0-3.17-1.23-6.16-3.53-8.52zM12.05 21.82a9.77 9.77 0 01-4.97-1.36l-.35-.21-3.66.96.98-3.57-.23-.37a9.76 9.76 0 01-1.49-5.27c0-5.41 4.41-9.82 9.82-9.82 2.62 0 5.08 1.02 6.93 2.88a9.72 9.72 0 012.89 6.94c0 5.41-4.41 9.82-9.82 9.82zm5.39-7.35c-.3-.15-1.76-.87-2.03-.97-.27-.1-.46-.15-.66.15-.19.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.91-2.2-.24-.58-.49-.5-.66-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.49s1.08 2.89 1.23 3.09c.15.2 2.12 3.23 5.14 4.53.72.31 1.28.49 1.71.63.72.23 1.38.2 1.9.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35z"/>
+                    </svg>
+                    <span>+91 74014 03037</span>
+                </a>
             </div>
             <div class="p-3">
                 <h4 class="font-semibold mb-5 text-xl text-white">Social Links</h4>
-                <div class="flex gap-3">
-                    <a href="https://www.instagram.com/almaaherbalnature/" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-6 h-6 text-white hover:text-green-500 transition-colors duration-300">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                            <circle cx="12" cy="12" r="4" />
-                            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
-                        </svg>
+                <div class="flex gap-2">
+                    <!-- instagram  -->
+                    <a href="https://www.instagram.com/accounts/login/?next=%2Falmaaherbalnature%2F&source=omni_redirect" aria-label="Instagram" target="_blank" class="p-1 bg-white rounded-full hover:bg-primary  text-primary hover:text-white hoverEffect">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="w-6 h-6 ">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="17" cy="7" r="1.2"fill="currentColor"/>
+                    </svg>
                     </a>
-                    <a href="https://api.whatsapp.com/send/?phone=%2B917401403000&text&type=phone_number&app_absent=0" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none"  stroke="currentColor" stroke-width="2" class="w-6 h-6 text-white hover:text-green-500 transition-colors duration-300">
-                            <path d="M21 11.5a8.38 8.38 0 0 1-1.5 4.7L21 22l-5.8-1.5A8.5 8.5 0 1 1 21 11.5z"/>
-                            <path d="M16.5 13.5c-.3.8-1.6 1.5-2.2 1.6-.6.1-1.3.1-2.1-.2a9.6 9.6 0 0 1-3.4-2.1 8.9 8.9 0 0 1-2.1-3.4c-.3-.8-.3-1.5-.2-2.1.1-.6.8-1.9 1.6-2.2.4-.1.9 0 1.1.3l.8 1.9c.1.3.1.6 0 .8l-.4.7c-.1.2-.1.4 0 .6a6.7 6.7 0 0 0 3.1 3.1c.2.1.4.1.6 0l.7-.4c.2-.1.5-.1.8 0l1.9.8c.3.2.4.7.3 1.1z"/>
-                        </svg>
+                    <!-- X twitter  -->
+                    <a href="https://x.com/almaaherbal_" target="_blank" class="p-1 bg-white rounded-full hover:bg-primary text-primary hover:text-white hoverEffect ">
+                    <svg  viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 ">
+                        <path d="M18.24 2H21l-6.46 7.39L22 22h-6.78l-5.3-6.88L3.9 22H1.14l6.92-7.9L2 2h6.9l4.8 6.24L18.24
+                        2zm-1.19 18h1.88L7.02 4h-2L17.05 20z"/>
+                    </svg>
                     </a>
-                    <a href="https://x.com/almaaherbal_" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-white hover:text-green-500 transition-colors duration-300">
-                            <path d="M18.9 2H22l-6.9 7.9L22 22h-6.2l-4.9-6.5L5.3 22H2l7.3-8.3L2 2h6.3l4.5 6L18.9 2z"/>
-                        </svg>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/almaherbal"  aria-label="Facebook" target="_blank" class="p-1 bg-white rounded-full hover:bg-primary text-primary hover:text-white hoverEffect">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 ">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7
+                        c0-1.1.9-2 2-2h3z"/>
+                    </svg>
                     </a>
-                    <a href="https://www.facebook.com/almaherbal" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-white hover:text-green-500 transition-colors duration-300">
-                            <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6v1.9H16l-.4 2.9h-2.6v7A10 10 0 0 0 22 12z"/>
+                    <!-- Youtube -->
+                    <a href="https://www.youtube.com/@almaaherbalnature"  target="_blank" class="p-1 bg-white rounded-full hover:bg-primary text-primary hover:text-white hoverEffect">
+                        <svg   viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 ">
+                        <path d="M23.5 6.2s-.2-1.7-.9-2.4c-.8-.9-1.7-.9-2.1-1C17.6 2.5 12 2.5 12 2.5h0s-5.6 0-8.5.3c-.4.1-1.3.1-2.1 1
+                            -.7.7-.9 2.4-.9 2.4S0 8.1 0 10v2c0 1.9.5 3.8.5 3.8s.2 1.7.9 2.4c.8.9 1.9.9 2.4 1
+                            1.7.2 7.2.3 8.2.3 0 0 5.6 0 8.5-.3.4-.1 1.3-.1 2.1-1
+                            .7-.7.9-2.4.9-2.4S24 13.9 24 12v-2c0-1.9-.5-3.8-.5-3.8zM9.5 14.5v-5l5 2.5-5 2.5z"/>
                         </svg>
                     </a>
                 </div>
@@ -217,28 +280,51 @@
         </div>
     </div>
 </footer>
-
 <script >
+// animation js for mobile menu toggle
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+menuBtn.addEventListener('click', () => {
+  if (mobileMenu.classList.contains('max-h-0')) {
+    mobileMenu.classList.remove('max-h-0', 'opacity-0', 'scale-95');
+    mobileMenu.classList.add('max-h-96', 'opacity-100', 'scale-100');
+  } else {
+    mobileMenu.classList.add('max-h-0', 'opacity-0', 'scale-95');
+    mobileMenu.classList.remove('max-h-96', 'opacity-100', 'scale-100');
+  }
+});
+
+// close mobile menu when clicking a link
+const mobileLinks = document.querySelectorAll('#mobileMenu a');
+
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('max-h-0', 'opacity-0', 'scale-95');
+    mobileMenu.classList.remove('max-h-96', 'opacity-100', 'scale-100');
+  });
+});
     
-  const price = 2015;
-  const shipping = 50;
-  let qty = 1;
-  let payment = "cod";
+const price = 2107.00;
+const shipping = 0;
+let qty = 1;
+let payment = "cod";
 
-  function updateQty(val) {
-    qty = Math.max(1, qty + val);
-    document.getElementById("qty").innerText = qty;
-    calculateTotal();
-  }
+function updateQty(val) {
+  qty = Math.min(5, Math.max(1, qty + val)); 
 
-  function calculateTotal() {
-    const subtotal = price * qty;
-    const total = subtotal + shipping;
+  document.getElementById("qty").innerText = qty;
+  calculateTotal();
+}
 
-    document.getElementById("subtotal").innerText = subtotal;
-    document.getElementById("total").innerText = total;
-    document.getElementById("mobileTotal").innerText = total;
-  }
+function calculateTotal() {
+  const subtotal = price * qty;
+  const total = subtotal + shipping;
+
+  document.getElementById("subtotal").innerText = subtotal.toFixed(2);
+  document.getElementById("total").innerText = total.toFixed(2);
+  document.getElementById("mobileTotal").innerText = total.toFixed(2);
+}
 
   function selectPayment(type) {
     payment = type;
@@ -269,5 +355,6 @@
   calculateTotal();
 
 </script>
+<script src="./script.js"></script>
 </body>
 </html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#0A764C",
+        secondary: "#0CC07B",
+      },
+      keyframes: {
+        pop: {
+          "0%": { transform: "scale(0.5)", opacity: 0 },
+          "70%": { transform: "scale(1.1)", opacity: 1 },
+          "100%": { transform: "scale(1)" }
+        },
+        float: {
+          "0%,100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" }
+        },
+        fadeUp: {
+          "0%": { opacity: 0, transform: "translateY(40px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" }
+        }
+      },
+      animation: {
+        pop: "pop 0.6s ease-out forwards",
+        float: "float 6s ease-in-out infinite",
+        fadeUp: "fadeUp 0.8s ease-out forwards"
+      },
+       fontFamily: {
+          heading: [ "SN Pro", "sans-serif"],
+          body: ["SN Pro"," sans-serif"],
+          subheading:["Playfair Display", "serif"]
+      },
+    }
+  }
+}
+</script>
+
+<style>
+/* Extra smooth glass look */
+.glass {
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.75);
+}
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 14px;
+  border-radius: 2px;
+  opacity: 0.9;
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-20px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+</style>
+
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-green-50 relative overflow-hidden font-body">
+    <!-- CONFETTI CONTAINER -->
+<div id="confetti-container" class="fixed inset-0 pointer-events-none overflow-hidden z-0"></div>
+
+
+<!-- BACKGROUND FLOATING BLOBS -->
+<div class="absolute w-72 h-72 bg-green-200/40 rounded-full blur-3xl top-10 left-10 animate-float"></div>
+<div class="absolute w-72 h-72 bg-emerald-300/30 rounded-full blur-3xl bottom-10 right-10 animate-float" style="animation-delay:2s"></div>
+<div class="absolute w-60 h-60 bg-teal-200/30 rounded-full blur-3xl top-1/2 left-1/3 animate-float" style="animation-delay:4s"></div>
+
+<!-- MAIN CARD -->
+<div class="glass shadow-2xl rounded-3xl p-10 max-w-md w-full text-center relative z-10 animate-fadeUp">
+
+  <!-- CHECK ICON -->
+  <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-secondary/20 flex items-center justify-center animate-pop">
+    <svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+    </svg>
+  </div>
+
+  <h1 class="text-3xl font-bold text-primary mb-2">Thank You!</h1>
+  <p class="text-gray-600 mb-6">
+    Your order has been placed successfully.  
+    A confirmation has been sent to your email.
+  </p>
+
+  <!-- ORDER DETAILS -->
+  <div class="bg-green-50 border border-green-100 rounded-xl p-5 text-left mb-6">
+    <h2 class="font-semibold text-primary mb-3 text-center">Order Summary</h2>
+    <div class="space-y-2 text-sm text-gray-700">
+      <p class="flex justify-between"><span>Order ID</span><span>#HC10293</span></p>
+      <p class="flex justify-between"><span>Product</span><span>Herbal Care Oil</span></p>
+      <p class="flex justify-between"><span>Quantity</span><span>2</span></p>
+      <p class="flex justify-between"><span>Payment</span><span>COD</span></p>
+      <hr>
+      <p class="flex justify-between font-semibold text-primary">
+        <span>Total</span>
+        <span>₹4214.00</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- BUTTONS -->
+  <div class="flex gap-3 justify-center">
+    <a href="invoice.html"
+      class="bg-primary text-white px-6 py-3 rounded-xl hover:bg-secondary transition-all duration-300 shadow-md hover:scale-105">
+      Download Invoice
+    </a>
+
+    <a href="index.html"
+      class="border border-primary text-primary px-6 py-3 rounded-xl hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105">
+      Continue Shopping
+    </a>
+  </div>
+
+</div>
+
+</body>
+<script>
+function launchConfetti() {
+  const container = document.getElementById("confetti-container");
+  const colors = ["#0A764C", "#0CC07B", "#22c55e", "#4ade80", "#86efac"];
+
+  for (let i = 0; i < 120; i++) {
+    const confetti = document.createElement("div");
+    confetti.className = "confetti";
+
+    confetti.style.left = Math.random() * 100 + "vw";
+    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    confetti.style.animationDelay = Math.random() * 1 + "s";
+    confetti.style.transform = `rotate(${Math.random()*360}deg)`;
+
+    container.appendChild(confetti);
+
+    setTimeout(() => confetti.remove(), 3500);
+  }
+}
+
+window.onload = launchConfetti;
+</script>
+
+</html>

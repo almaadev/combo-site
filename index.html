@@ -7,749 +7,1091 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  
+  <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+                primary: "#0A764C",
+                secondary: "#0CC07B",
+                darkhead: "#3D7E01",
+                headtext:"#254B01",
+
+            },
+            fontFamily: {
+                heading: [ "SN Pro", "sans-serif"],
+                body: ["SN Pro"," sans-serif"],
+                subheading:["Playfair Display", "serif"]
+            },
+            }
+        }
+        }
+    </script>
+
 </head>
-<body class="bg-green-50 text-gray-800">
+<body class="bg-green-50 text-gray-800 font-body">
+
     <header>
         <!-- Navbar -->
         <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-transparent shadow-lg">
-            <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-                <a href="#home" class="text-white font-semibold text-2xl">Almaa Combo Site</a>
+            <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between md:justify-between ">
+                <a href="#home" class="">
+                    <img src="./assets/Almaa Herbal Logo_Without TM.png" alt="" class="md:w-24 w-20 ">
+                </a>
                 <ul class="hidden md:flex space-x-8 text-white font-medium">
-                    <li><a href="#home" class="nav-text relative">Home</a></li>
-                    <li><a href="#about" class="nav-text relative">About</a></li>
-                    <li><a href="#benefits" class="nav-text relative">Benefits</a></li>
-                    <li><a href="#ingredients" class="nav-text relative">Ingredients</a></li>
-                    <li><a href="#product" class="nav-text relative">Product</a></li>
-                    <li><a href="#how-to-use" class="nav-text relative">How To Use</a></li>
-                    <li><a href="#faq" class="nav-text relative">FAQ</a></li>
-                    <li><a href="#testimonials" class="nav-text relative">Testimonial</a></li>
+                    <li class="hover:scale-105 hoverEffect" ><a href="#home" class="nav-text relative">Home</a></li>
+                    <li class="hover:scale-105 hoverEffect"><a href="#about" class="nav-text relative">About</a></li>
+                    <li class="hover:scale-105 hoverEffect"><a href="#benefits" class="nav-text relative">Benefits</a></li>
+                    <li class="hover:scale-105 hoverEffect"><a href="#ingredients" class="nav-text relative">Ingredients</a></li>
+                    <li class="hover:scale-105 hoverEffect"><a href="#product" class="nav-text relative">Product</a></li>
+                    <li class="hover:scale-105 hoverEffect"><a href="#how-to-use" class="nav-text relative">How To Use</a></li>
+                    <li class="hover:scale-105 hoverEffect"><a href="#faq" class="nav-text relative">FAQ</a></li>
+                    <li class="hover:scale-105 hoverEffect"><a href="#testimonials" class="nav-text relative">Testimonial</a></li>
                 </ul>
                 <button class="md:hidden text-white text-2xl" id="menuBtn">☰</button>
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="md:hidden overflow-hidden max-h-0 opacity-0 scale-95 transition-all duration-500 ease-in-out bg-green-900 px-6">
-                <a class="block py-2 text-white text-center" href="#home">Home</a>
-                <a class="block py-2 text-white text-center" href="#about">About</a>
-                <a class="block py-2 text-white text-center" href="#benefits">Benefits</a>
-                <a class="block py-2 text-white text-center" href="#ingredients">Ingredients</a>
-                <a class="block py-2 text-white text-center" href="#product">Product</a>
-                <a class="block py-2 text-white text-center" href="#how-to-use">How To Use</a>
-                <a class="block py-2 text-white text-center" href="#faq">FAQ</a>
-                <a class="block py-2 text-white text-center" href="#testimonials">Testimonial</a>
+            <div id="mobileMenu" class="md:hidden overflow-hidden max-h-0 opacity-0 scale-95 transition-all duration-500 ease-in-out  px-6">
+                <a class="block py-2 text-white text-center bg-primary border border-primary hover:scale-105 hover:bg-white hover:text-primary hover:rounded-xl hoverEffect rounded-t-xl" href="#home">Home</a>
+                <a class="block py-2 text-white text-center bg-primary border border-primary hover:scale-105 hover:bg-white hover:text-primary hover:rounded-xl hoverEffect" href="#about">About</a>
+                <a class="block py-2 text-white text-center bg-primary border border-primary hover:scale-105 hover:bg-white hover:text-primary hover:rounded-xl hoverEffect" href="#benefits">Benefits</a>
+                <a class="block py-2 text-white text-center bg-primary border border-primary hover:scale-105 hover:bg-white hover:text-primary hover:rounded-xl hoverEffect" href="#ingredients">Ingredients</a>
+                <a class="block py-2 text-white text-center bg-primary border border-primary hover:scale-105 hover:bg-white hover:text-primary hover:rounded-xl hoverEffect" href="#product">Product</a>
+                <a class="block py-2 text-white text-center bg-primary border border-primary hover:scale-105 hover:bg-white hover:text-primary hover:rounded-xl hoverEffect" href="#how-to-use">How To Use</a>
+                <a class="block py-2 text-white text-center bg-primary border border-primary hover:scale-105 hover:bg-white hover:text-primary hover:rounded-xl hoverEffect" href="#faq">FAQ</a>
+                <a class="block py-2 text-white text-center bg-primary border border-primary hover:scale-105 hover:bg-white hover:text-primary hover:rounded-xl hoverEffect rounded-b-xl" href="#testimonials">Testimonial</a>
             </div>
         </nav>
     </header>
- <main>
-    <!-- HERO -->
-    <section id="home" class="relative min-h-[90svh] flex items-center overflow-hidden"
-            style="background-image:
-                    linear-gradient(to right, rgba(12,60,45,.9), rgba(12,60,45,.65)),
-                    url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
-                    background-size: cover;
-                    background-position: center;" >
+    <main>
+        <!-- HERO -->
+        <section id="home" class="relative min-h-[70vh] md:min-h-[80vh] flex items-center overflow-hidden shadow-lg" >
 
-        <!-- moving gradient overlay -->
-        <div class="absolute inset-0 bg-gradient-to-tr from-green-900/30 via-transparent to-green-700/30 animate-gradient"></div>
+             <!-- Mobile -->
+            <div class="absolute inset-0 bg-cover bg-center md:hidden"
+                style="background-image:url('./assets/banner-image-mobile.png')"></div>
 
-        <!-- content -->
-        <div class="relative max-w-7xl mx-auto px-6 ">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-16 items-center ">
-                 <!-- IMAGE -->
-                <div class="flex justify-center order-1 lg:order-2 ">
-                    <img
-                        src="./assets/slider_img-removebg-preview.png"
-                        alt="product-image"
-                        class="w-[240px] sm:w-[320px] md:w-[420px] lg:w-[520px]
-                            drop-shadow-[0_30px_60px_rgba(0,0,0,0.45)]
-                            animate-float hover:scale-105 transition-transform duration-500" >
+            <!-- Desktop -->
+            <div class="absolute inset-0 hidden md:block bg-cover bg-center"
+                style="background-image:url('./assets/banner-image.jpeg')"></div>
+            <!-- moving gradient overlay -->
+            <div class="absolute inset-0 bg-green-900/60 md:bg-green-900/40"></div>
+
+            <!-- content -->
+            <div class="mt-[50px] md:mt-0 relative max-w-7xl mx-auto px-6  py-10 md:py-0">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-16 items-center ">
+                    <!-- IMAGE -->
+                    <div class="hidden md:flex justify-center order-1 lg:order-2 reveal">
+                        <img
+                            src="./assets/product-images/Diabetes-care.png"
+                            alt="product-image"
+                            class="w-[240px] sm:w-[320px] md:w-[420px] lg:w-[520px]
+                                drop-shadow-[0_30px_60px_rgba(0,0,0,0.45)]
+                                animate-float transition-transform duration-500" >
+                    </div>
+
+                    <!-- TEXT -->
+                    <div>
+                        <div class="flex flex-col gap-6 text-left order-2 lg:order-1 reveal">
+
+                            <h1 class=" text-center md:text-start text-4xl md:text-6xl  font-bold leading-tight  animate-fadeUp text-gray-100">
+                                    ALMAA's
+                                <span class="text-3xl md:text-5xl block text-secondary animate-fadeUp delay-150">
+                                Natural Diabetes Care Combo
+                                </span>
+                            </h1>
+                            <p class="text-green-100/90 max-w-xl text-base sm:text-lg animate-fadeUp delay-300">
+                                Almaa Diabetes Care Combo
+                                <span class="text-green-300 font-medium">
+                                consists of Potent herbal supplements for controlling diabetes 
+                                </span>
+                                from the root
+                            </p>
+                        </div>
+
+                        <!-- IMAGE -->
+                        <div class="md:hidden flex justify-center order-1 lg:order-2 ">
+                            <img
+                                src="./assets/product-image/ULCER-CARE-COMBO.png"
+                                alt="product-image"
+                                class="w-[240px] sm:w-[320px] md:w-[420px] lg:w-[520px]
+                                    drop-shadow-[0_30px_60px_rgba(0,0,0,0.45)]
+                                    animate-float hover:scale-105 transition-transform duration-500" >
+                        </div>
+
+                        <!-- CTA -->
+                        <div class="mt-5 md:mt-16 animate-fadeUp delay-500 md:justify-start flex justify-center reveal">
+                            <a href="/buy.html" class="inline-flex items-center gap-3 px-12 py-4 rounded-full bg-secondary border border-secondary font-semibold text-white hover:scale-105 hover:bg-transparent hoverEffect" >
+                                Buy Now
+                                <span class="animate-pulse">→</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ABOUT -->
+        <section id="about" class="py-5 md:py-10 bg-white overflow-hidden ">
+            
+            <div class="max-w-7xl mx-auto px-6">
+            <!-- Heading -->
+            <div class="flex flex-col items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-[50px] h-[2px] md:h-[3px] bg-primary rounded-2xl "></div>
+                    <h2 class="text-3xl md:text-5xl font-bold font-heading">About</h2>
+                    <div class="w-[50px] h-[2px] md:h-[3px] bg-primary rounded-2xl "></div>
+                </div>
+                <h1 class="text-primary text-xl md:text-5xl font-bold md:mb-4 font-heading">Natural Diabetes Care Combo</h1>
+            </div>
+                <!-- Content -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ">
+
+                    <!-- Image -->
+                    <div class="flex justify-center reveal">
+                        <div class="relative">
+                        <img
+                            src="./assets/product-images/Diabetes-care.png"
+                            alt="Almaa Arthritis Pain Relief"
+                            class="w-[260px] sm:w-[320px] md:w-[420px] lg:w-[480px] hover:scale-105 hoverEffect "/>
+
+                        <!-- Soft natural glow -->
+                        <div class="absolute inset-0 bg-green-600/10 blur-3xl -z-10"></div>
+                        </div>
+                    </div>
+
+                    <!-- Text -->
+                    <div class="text-gray-700 text-base md:text-lg leading-relaxed reveal">
+
+                        <p class="mb-6">
+                        <strong class="text-green-800">Almaa Diabetes Care Combo</strong> consists of Potent herbal supplements for controlling diabetes from the root. 
+                        This Combo contains a shastrically curated herbal combination for strong action against diabetes.
+                        </p>
+
+                        <p class="mb-6">
+                            MM chooranam - Combination of potent Anti-Diabetic Herbs carefully collected & Processed as per classical texts. 
+                            This Ensures a check on glucose spikes & Insulin sensitivity.
+                        </p>
+
+                        <p>
+                         Aavira Dm -
+                        <span class="text-green-800 font-medium">
+                           Potent herbal extracts infusion to support glycogenesis & Support the Nervous system 
+                        </span>.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- BENEFITS -->
+        <section id="benefits" class="py-20 bg-gradient-to-b from-white to-green-50 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6">
+                <!-- Heading -->
+                <div class="flex flex-col items-center mb-24">
+                    <div class="flex items-center gap-3">
+                        <div class="w-[50px] h-[2px] md:h-[3px] bg-primary rounded-2xl "></div>
+                        <h2 class="text-3xl md:text-5xl font-bold font-heading">Benefits</h2>
+                        <div class="w-[50px] h-[2px] md:h-[3px] bg-primary rounded-2xl "></div>
+                    </div>
+                    <p class="text-gray-600 mt-5"> Crafted with Ayurvedic precision to heal naturally and restore balance from within.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-16 items-start">
+                    <!-- RIGHT SIDE (Animated Cards) -->
+                    <div class="space-y-5">
+                        <!-- Benefit Item 1-->
+                        <div class="benefit-item group relative bg-white rounded-2xl shadow-xl p-5 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                            <div class="flex items-start gap-6">
+                                <!-- Number Badge -->
+                                <div class=" p-2 flex items-center justify-center rounded-full bg-primary text-white text-sm md:text-lg font-bold">
+                                    01
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-semibold mb-3">
+                                        Manages Blood Sugar Level Naturally
+                                    </h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                       Supports healthy glucose metabolism and helps maintain balanced blood sugar levels with the power of natural herbal ingredients.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Decorative Line -->
+                            <div class="absolute bottom-0 left-0 h-[3px] w-0 bg-primary transition-all duration-500 group-hover:w-full rounded-full"></div>
+                        </div>
+                        <!-- Benefit Item 2-->
+                        <div class="benefit-item group relative bg-white rounded-2xl shadow-xl p-5 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                            <div class="flex items-start gap-6">
+                                <div class="p-2 flex items-center justify-center rounded-full bg-primary text-white text-sm md:text-lg font-bold">
+                                    02
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-semibold mb-3">
+                                    Prevents Diabetes Complications
+                                    </h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Helps reduce the risk of long-term diabetes-related complications by supporting healthy blood circulation, nerve function, and overall metabolic balance.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 left-0 h-[3px] w-0 bg-primary transition-all duration-500 group-hover:w-full rounded-full"></div>
+                        </div>
+                        <!-- Benefit Item 3 -->
+                        <div class="benefit-item group relative bg-white rounded-2xl shadow-xl p-5 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                            <div class="flex items-start gap-6">
+                                <div class="p-2 flex items-center justify-center rounded-full bg-primary text-white text-sm md:text-lg font-bold">
+                                    03
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-semibold mb-3">
+                                    Decreases HbA1c
+                                    </h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                    Supports healthy HbA1c levels by promoting better glucose control over time, helping maintain stable long-term blood sugar management.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 left-0 h-[3px] w-0 bg-primary transition-all duration-500 group-hover:w-full rounded-full"></div>
+                        </div>
+                        <!-- Benefit Item 4-->
+                        <div class="benefit-item group relative bg-white rounded-2xl shadow-xl p-5 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                            <div class="flex items-start gap-6">
+                                <div class="p-2 flex items-center justify-center rounded-full bg-primary text-white text-sm md:text-lg font-bold">
+                                04
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-semibold mb-3">
+                                        Increases Energy
+                                    </h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                    Enhances natural energy levels by improving glucose utilization in the body, reducing fatigue and supporting active daily living.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="absolute bottom-0 left-0 h-[3px] w-0 bg-primary transition-all duration-500 group-hover:w-full rounded-full"></div>
+                        </div>
+
+                    </div>
+                    <!-- left side image  -->
+                    <!-- Image -->
+                        <div class="flex justify-center reveal">
+                            <div class="relative">
+                            <img
+                                src="./assets/product-images/Diabetes-care.png"
+                                alt="Almaa Arthritis Pain Relief"
+                                class="w-[260px] sm:w-[320px] md:w-[420px] lg:w-[480px]
+                                    hover:scale-105 hoverEffect "
+                            />
+
+                            <!-- Soft natural glow -->
+                            <div class="absolute inset-0 bg-green-600/10 blur-3xl -z-10"></div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <!-- ingredients -->
+        <section id="ingredients" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <!-- Heading -->
+                <div class="text-center mb-16">
+                    <div class="flex justify-center items-center gap-3 mb-3">
+                        <div class="w-12 h-[3px] bg-primary rounded-full"></div>
+                        <h2 class="text-3xl md:text-5xl font-bold font-heading">
+                        Key Ingredients
+                        </h2>
+                        <div class="w-12 h-[3px] bg-primary rounded-full"></div>
+                    </div>
+                    <p class="text-gray-500 text-base md:text-lg">
+                        What's inside that really matters
+                    </p>
+                </div>
+                <!-- Ingredients Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12">
+
+                    <!-- Ingredient 1 -->
+                    <div class="group text-center">
+                        <div class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-2 border-gray-100 
+                                    transition-all duration-300 group-hover:scale-105 z-reveal">
+                            <img src="./assets/ingredients-image/sirikurinjan.jpg" alt="sirikurinjan"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">sirikurinjan</h3>
+                        <p class="text-gray-600 text-sm">
+                           Regulates blood sugar levels and helps in diabetes management
+                        </p>
+                    </div>
+
+                    <!-- Ingredient 2 -->
+                    <div class="group text-center">
+                        <div class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-2 border-gray-100 
+                                    transition-all duration-300 group-hover:scale-105 z-reveal">
+                        <img src="./assets/ingredients-image/naval-kottai.jpg" alt="Naval Kottai"
+                            class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Naval Kottai</h3>
+                        <p class="text-gray-600 text-sm">
+                            Regulates blood sugar levels and improves  digestion
+                        </p>
+                    </div>
+
+                    <!-- Ingredient 3 -->
+                    <div class="group text-center">
+                        <div class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-2 border-gray-100  
+                                    transition-all duration-300 group-hover:scale-105 z-reveal">
+                        <img src="./assets/ingredients-image/vilvam.png" alt="Vilvam"
+                            class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Vilvam</h3>
+                        <p class="text-gray-600 text-sm">
+                            Helps to treat dysentery and boosts overall digestive health
+                        </p>
+                    </div>
+
+                    <!-- Ingredient 4 -->
+                    <div class="group text-center">
+                        <div class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-2 border-gray-100  
+                                    transition-all duration-300 group-hover:scale-105 z-reveal">
+                        <img src="./assets/ingredients-image/Shilajit.webp" alt="Shilajith"
+                            class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Shilajith</h3>
+                        <p class="text-gray-600 text-sm">
+                            Shilajith is a natural resin which improves stamina, enhances energy & improves immunity
+                        </p>
+                    </div>
+
+                    <!-- Ingredient  -->
+                    <div class="group text-center">
+                        <div class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-2 border-gray-100  
+                                    transition-all duration-300 group-hover:scale-105 z-reveal">
+                        <img src="./assets/ingredients-image/Aavarai-panchangam.jpg" alt="Aavarai Panchangam"
+                            class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Aavarai Panchangam</h3>
+                        <p class="text-gray-600 text-sm">
+                            The whole planet aavarai is an important herbal remedy for diabetes management
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- products -->
+        <section id="product" class="py-10 md:py-32 bg-gradient-to-b from-white to-green-50">
+            <div class="max-w-7xl mx-auto px-4">
+
+                <!-- Heading -->
+                <div class="text-center mb-5  md:mb-20">
+                    <h2 class="text-3xl md:text-5xl font-bold  font-heading text-primary">Almaa Diabetes Care Combo</h2>
                 </div>
 
-                <!-- TEXT -->
-                <div class="flex flex-col gap-6 text-left order-2 lg:order-1">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-1 items-start">
+                    <div>
+                        <div class="image-slider-wrapper">
+                            <div class="image-slider" id="productSlider">
+                                <img src="./assets/product-image/ULCER-CARE-COMBO.png"class="rounded-lg" />
+                                <img src="./assets/product-image/INGREDIENTS.png" class="rounded-lg" />
+                                <img src="./assets/product-image/BENEFITS.png" class="rounded-lg"/>
+                                <img src="./assets/product-image/HOW-TO-USE.png" class="rounded-lg"/>
+                            </div>
+                        </div>
 
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-green-50 animate-fadeUp">
-                       ALMAA
-                        <span class="block text-green-300 animate-fadeUp delay-150">
-                         ULCER CARE COMBO
-                        </span>
-                    </h1>
+                        <!-- Thumbnails -->
+                        <div class="flex gap-4 justify-center mt-6">
+                            <img src="./assets/product-image/ULCER-CARE-COMBO.png" class="thumb active-thumb" />
+                            <img src="./assets//product-image/INGREDIENTS.png" class="thumb" />
+                            <img src="./assets/product-image/BENEFITS.png" class="thumb" />
+                            <img src="./assets/product-image/HOW-TO-USE.png" class="thumb " />
+                        </div>
 
-                    <p class="text-green-100/90 max-w-xl text-base sm:text-lg animate-fadeUp delay-300">
-                        Almaa Ulcer Care Combo helps to reduce the
-                        <span class="text-green-300 font-medium">
-                        gastric irritation, control nausea, and act as a natural coolant for
-                        </span>
-                        heartburn.
+                        <!-- ZOOM MODAL -->
+                        <div id="zoomModal" class="hidden md:flex justify-center items-center zoom-modal ">
+                            <div class="w-[100%] h-[60%] md:w-[60%] md:h-[80%] bg-white backdrop-blur-md flex items-center justify-center  p-2 rounded-lg" >
+                                <button class="zoom-close text-primary absolute text-3xl md:text-5xl top-0 right-0 md:top-0 md:right-5 " onclick="closeZoom()">×</button>
+                                <img id="zoomImage" class="rounded-xl  h-[90%]"  alt="Zoomed Product"/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <!-- RIGHT: Product Info -->
+                <div class="bg-white/70 backdrop-blur-xl rounded-2xl py-16 px-10 shadow-lg ">
+
+                    <h3 class="text-center md:text-start text-xl md:text-3xl font-semibold mb-4 ">
+                        ALMAA DIABATES CARE COMBO
+                    </h3>
+
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                       Almaa Diabetes Care Combo consists of Potent herbal supplements for controlling diabetes from the root
                     </p>
+
+                    <!-- Rating -->
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="flex text-yellow-400">
+                            ★★★★☆
+                        </div>
+                        <span class="text-green-800 font-medium">(100 Reviews)</span>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="flex items-end gap-2 mb-8">
+                        <span class="text-3xl font-bold text-green-800">₹1863.00</span>
+                        <span class="line-through text-green-800/50 text-lg">₹2000</span>
+                        <span class="text-sm text-green-700 bg-green-100 px-1 md:px-3 py-1 rounded-full">
+                            Save ₹137
+                        </span>
+                    </div>
+
+                    <!-- Quantity
+                    <div class="flex items-center gap-6 mb-10">
+                        <span class="font-medium">Quantity</span>
+                        <div class="flex items-center border rounded-full overflow-hidden">
+                            <button onclick="updateQty(-1)" class="qty-btn">−</button>
+                            <span id="qty" class="px-6">1</span>
+                            <button onclick="updateQty(1)" class="qty-btn">+</button>
+                        </div>
+                    </div> -->
 
                     <!-- CTA -->
-                    <div class="mt-8 animate-fadeUp delay-500 ">
-                        <a
-                        href="/buy.html"
-                        class="inline-flex items-center gap-3 px-12 py-4 rounded-full
-                                font-semibold bg-green-600 text-white
-                                shadow-xl transition-all duration-300
-                                hover:bg-green-800 hover:scale-105" >
-                            Buy Now
-                        <span class="animate-pulse">→</span>
+                    
+                    <a href="/buy.html" class="font-bold text-xl border border-primary rounded-lg px-16 py-2 bg-primary text-white hover:bg-white  hover:text-primary hover:scale-110 hoverEffect">
+                        Buy Now 
+                    </a>
+
+                </div>
+                </div>
+            </div>
+        </section>
+        <!-- HOW TO USE -->
+        <section id="how-to-use" class="py-14 md:py-24 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4">
+                <!-- Heading -->
+                <div class="flex flex-col items-center mb-4">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-[50px] h-[3px] bg-primary rounded-2xl "></div>
+                        <h2 class="text-3xl md:text-5xl font-bold font-heading">How To Use</h2>
+                        <div class="w-[50px] h-[3px] bg-primary rounded-2xl "></div>
+                    </div>
+                    <h1 class="text-primary text-xl md:text-5xl font-bold font-heading mt-2">Almaa Diabetes Care Combo</h1>
+                </div>
+                <!-- Flow Wrapper -->
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-8 mt-10 md:mt-24">
+                    <!-- STEP 1 -->
+                    <div class="relative w-[220px] h-[350px] md:w-[240px] md:h-[370px] rounded-2xl overflow-hidden shadow-2xl group reveal 
+                            hoverEffect hover:scale-105">
+                        <!-- Image -->
+                        <img src="./assets/how-to-use-images/ulcer-choornam-mixing-image.png" alt="Ulcer Chooranam herbal medicine usage instructions" class="w-full h-[95%] object-cover" />
+
+                        <!-- Overlay -->
+                        <div class="absolute bottom-0 left-0 w-full h-[40%]  bg-gradient-to-t from-green-950 via-green-900/95 to-transparent 
+                                    px-5 py-6 md:px-4 md:py-3 flex flex-col justify-end">
+                            <h3 class="text-base font-bold text-yellow-400 text-center">
+                               MM chooranam 100gms
+                            </h3>
+
+                            <p class="text-xs md:text-sm text-green-100 mt-1 leading-relaxed text-center">
+                            5 grams before food with 100ml warm water. (Morning & Night)
+                            </p>
+
+                            <span class="hidden md:block text-center text-xs md:text-sm text-white/90 font-semibold mt-1"> Next Step &raquo; </span>
+
+                        </div>
+                    </div>
+
+                    <!-- ARROW -->
+                    <div class="flow-arrow-mobile lg:hidden">⬇</div>
+
+                    <!-- STEP 2 -->
+                    <div class="relative w-[220px] h-[350px] md:w-[240px] md:h-[380px] rounded-2xl overflow-hidden shadow-2xl group reveal 
+                            hoverEffect hover:scale-105" >
+                        <!-- Image -->
+                        <img  src="./assets/how-to-use-images/sundaivatral-2.png" alt="Ulcer Chooranam" class="w-full h-full object-cover" />
+                        <!-- Dark Green Overlay -->
+                        <div class="absolute bottom-0 left-0 w-full h-[45%]  bg-gradient-to-t from-green-950 via-green-900/95 to-transparent 
+                                    px-5 py-6 md:px-4 md:py-3 flex flex-col justify-end">
+                            <h3 class="text-base font-bold text-yellow-400 text-center">
+                                Aavira Dm 120 tablets
+                            </h3>
+                            <p class="text-xs md:text-sm text-green-100 mt-1 leading-relaxed text-center">
+                                 2 tablets before food with warm water (Morning & Night)
+                            </p>
+                            <span class="hidden md:block text-center text-xs md:text-sm text-white/90 font-semibold mt-1"> Next Step &raquo; </span>
+                        </div>
+                    </div>
+                    <!-- ARROW -->
+                    <div class="flow-arrow-mobile lg:hidden">⬇</div>
+
+                    <!-- VIDEO -->
+                     <div class="w-[240px] h-[380px] md:w-[240px] md:h-[420px] rounded-2xl overflow-hidden shadow-2xl group reveal">
+                        <video src="./assets/how-to-use-images/Ayurvedic_Product_Commercial_Video_Script.mp4" autoplay muted loop playsinline  class="w-full h-full object-cover">
+                        </video> 
+                    </div>
+                    <!-- ARROW -->
+                    <div class="flow-arrow-mobile lg:hidden">⬇</div>
+
+                     <!-- STEP 3 -->
+                    <div class="relative w-[220px] h-[350px] md:w-[240px] md:h-[380px] rounded-2xl overflow-hidden shadow-2xl group reveal 
+                            hoverEffect hover:scale-105">
+                        <!-- Image -->
+                        <img  src="./assets/how-to-use-images/folloe-consistency.png" alt="Ulcer Chooranam" class="w-full h-full object-cover" />
+                        <!-- Dark Green Overlay -->
+                        <div class="absolute bottom-0 left-0 w-full h-[45%]  bg-gradient-to-t from-green-950 via-green-900/95 to-transparent 
+                                    px-5 py-6 md:px-4 md:py-3 flex flex-col justify-end">
+                            <h3 class="text-base font-bold text-yellow-400 text-center">
+                                Nilsugar 60 Capsules
+                               
+                            </h3>
+                            <p class="text-xs md:text-sm text-green-100 mt-1 leading-relaxed text-center">
+                                 1 capsule after food with warm water. (Morning & Night)
+                            </p>
+                            <span class="hidden md:block text-center text-xs md:text-sm text-white/90 font-semibold mt-1"> Next Step &raquo; </span>
+                        </div>
+                    </div>
+                    <!-- ARROW -->
+                    <div class="flow-arrow-mobile lg:hidden">⬇</div>
+                    <!-- STEP 4 -->
+                    <div class="relative w-[220px] h-[350px] md:w-[240px] md:h-[370px] rounded-2xl overflow-hidden shadow-2xl group reveal 
+                            hoverEffect hover:scale-105">
+                        <!-- Image -->
+                        <img  src="./assets/how-to-use-images/use-daily.png" alt="Ulcer Chooranam" class="w-full h-full object-cover" />
+                        <!-- Dark Green Overlay -->
+                        <div class="absolute bottom-0 left-0 w-full h-[45%] bg-gradient-to-t from-green-950 via-green-900/95 to-transparent 
+                                    px-5 py-6 md:px-4 md:py-3 flex flex-col justify-end">
+                            <h3 class="text-base font-bold text-yellow-400 text-center">
+                               Follow Consistently
+                            </h3>
+                            <p class="text-xs md:text-sm text-green-100 mt-1 leading-relaxed text-center">
+                               for best results, along with light, easily digestible food.
+                            </p>
+                            <span class="hidden md:block text-center text-xs md:text-sm text-white/90 font-semibold mt-1">- Step End -</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ SECTION -->
+        <section id="faq" class="py-20 md:py-28 bg-gradient-to-t from-green-50 to-white">
+            <div class="max-w-5xl mx-auto px-6">
+                <!-- Heading -->
+                <div class="flex flex-col items-center mb-4 md:mb-20">
+                    <div class="flex justify-center items-center gap-3">
+                        <div class="w-[50px] h-[3px] bg-primary rounded-2xl "></div>
+                        <h2 class="text-3xl md:text-5xl font-bold font-heading text-center">F A Q</h2>
+                        <div class="w-[50px] h-[3px] bg-primary rounded-2xl "></div>
+                    </div>
+                    <p class="text-sm md:text-base text-gray-600 mb-3 font-semibold text-center">Everything you need to know about our natural ulcer solution</p>
+                </div>
+                <!-- FAQ LIST -->
+                <div class="space-y-6">
+
+                <!-- ITEM 1 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Which is the best medicine for an ulcer?
+                    <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="text-primary" ><path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                    <p>
+                        Almaa Ulcer Care combo offers natural herbal ingredients like
+                        Nelli Vattral, Ommam, Sundai Vattral, and Seeragam which help
+                        soothe the stomach and promote healing.
+                    </p>
+                    </div>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                    Natural way to treat an ulcer?
+                    <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="text-primary" ><path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                    <p>
+                        The natural way to treat ulcers is through diet control,
+                        stress reduction, and herbal medicine like Almaa Ulcer Care
+                        as per physician advice.
+                    </p>
+                    </div>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                    How to control a gastric ulcer?
+                    <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="text-primary" ><path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                    <p>
+                        If symptoms like vomiting blood or severe pain occur,
+                        consult a physician immediately. Follow medical advice
+                        and maintain a soft diet along with herbal care.
+                    </p>
+                    </div>
+                </div>
+
+                <!-- ITEM 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                    What are the common remedies for an ulcer?
+                    <span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="text-primary" ><path d="M480-345 240-585l56-56 184 183 184-183 56 56-240 240Z"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                    <p>
+                        Soft, non-spicy, low-fat foods and herbal supplements help
+                        manage ulcers effectively when taken consistently.
+                    </p>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Testimonial section -->
+        <section id="testimonials" class="py-10 md:py-28 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 ">
+                <!-- Heading -->
+                <div class="flex flex-col items-center mb-4 md:mb-20">
+                    <div class="flex justify-center items-center gap-3 ">
+                        <div class="w-[50px] h-[3px] bg-primary rounded-2xl "></div>
+                        <h2 class="text-3xl md:text-5xl font-bold font-heading text-center">Testimonial</h2>
+                        <div class="w-[50px] h-[3px] bg-primary rounded-2xl "></div>
+                    </div>
+                    <p class=" mt-5 md:mt-2 text-sm md:text-base text-gray-600 mb-3 font-semibold text-center">Real experiences from people who found natural relief</p>
+                </div>
+
+                <!-- Overall Rating -->
+                <div class="flex flex-col items-center mb-16">
+                <div class="flex text-yellow-400 text-3xl mb-2">
+                    ★ ★ ★ ★ ☆
+                </div>
+                <p class="text-green-800 font-semibold text-lg">
+                    4.8 / 5 Average Rating
+                </p>
+                <p class="text-sm text-gray-500">
+                    Based on 100+ verified users
+                </p>
+                </div>
+
+                <!-- ROW 1 (Move Right) -->
+                <div class="testimonial-row move-right ">
+                <div class="testimonial-track">
+                        
+                            <!-- Card 1 -->
+                            <div class="testimonial-card ">
+                                <p class="text-gray-700 mb-6">
+                                    “My frnd has suggested dr.anitha.really awesome treatment.
+                                    she explains the way about of my problem and diet was very well.really wonderful knowledge”
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h4 class="font-semibold text-green-800">Janarth V</h4>
+                                        <span class="text-sm text-gray-500">Chennai</span>
+                                    </div>
+                                    <div class="text-yellow-400">★★★★★</div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="testimonial-card">
+                                <p class="text-gray-700 mb-6">
+                                “Very good products, I'm using neermulli since 3 months very effective
+                                 v can feel different with in a month and I used anti dandruff shampoo it's good.
+                                 Currently using noni shampoo it's awesome i liked it.”
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h4 class="font-semibold text-green-800">Shalini Harish</h4>
+                                        <span class="text-sm text-gray-500">chennai</span>
+                                    </div>
+                                    <div class="text-yellow-400">★★★★☆</div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="testimonial-card">
+                                <p class="text-gray-700 mb-6">
+                                “We blessed with sweet baby girl after taking treatment in alma siddha care and special thanks
+                                 for Dr.velayutham sir, Sankar Anand sir and anitha mam.”
+                                </p>
+                                <div class="flex items-center justify-between">
+                                <div>
+                                    <h4 class="font-semibold text-green-800">bala.m bpk</h4>
+                                    <span class="text-sm text-gray-500">Tamil Nadu</span>
+                                </div>
+                                <div class="text-yellow-400">★★★★★</div>
+                                </div>
+                            </div>
+
+                            <!-- Card 4 -->
+                            <div class="testimonial-card">
+                                <p class="text-gray-700 mb-6">
+                                “Dr.Anitha mam during treatment time taken full care and given good suggestion apart from medicine.
+                                 We had good results within 4 months. Thanks a lot.”
+                                </p>
+                                <div class="flex items-center justify-between">
+                                <div>
+                                    <h4 class="font-semibold text-green-800">bala.M</h4>
+                                    <span class="text-sm text-gray-500">Tamil Nadu</span>
+                                </div>
+                                <div class="text-yellow-400">★★★★★</div>
+                                </div>
+                            </div>
+
+                            <!-- Card 5 -->
+                            <div class="testimonial-card">
+                                <p class="text-gray-700 mb-6">
+                                “Am a forest officer. I am taking treatment from Almaa for high pressure. Dr. Anitha prescribed medications for me.
+                                Taking 5 months. Now am free from high pressure. Dr. Anita man dedication towards patient is really awesome.”
+                                </p>
+                                <div class="flex items-center justify-between">
+                                <div>
+                                    <h4 class="font-semibold text-green-800">Sudanadhan S</h4>
+                                    <span class="text-sm text-gray-500">Tamil Nadu</span>
+                                </div>
+                                <div class="text-yellow-400">★★★★★</div>
+                                </div>
+                            </div>
+
+                            <!-- Card 6 -->
+                            <div class="testimonial-card">
+                                <p class="text-gray-700 mb-6">
+                                “Good treatment, Dr. Anitha is straight away saying initially itself whether they can do or not. 
+                                & succeeding in whatever they are attending. Only need is your patience & consistent medicine in take.”
+                                </p>
+                                <div class="flex items-center justify-between">
+                                <div>
+                                    <h4 class="font-semibold text-green-800">Senthil nathan</h4>
+                                    <span class="text-sm text-gray-500">Tamil Nadu</span>
+                                </div>
+                                <div class="text-yellow-400">★★★★★</div>
+                                </div>
+                            </div>
+                        
+                </div>
+                </div>
+
+                <!-- ROW 2 (Move Left) -->
+                <div class="testimonial-row move-left mt-10">
+                    <div class="testimonial-track">
+                        <!-- Card 1 -->
+                        <div class="testimonial-card ">
+                            <p class="text-gray-700 mb-6">
+                                “My find referred Dr.anitha mam. Before that I visited 4-5 Siddha clinic's for gastric and BP.
+                             Anitha mam explained very well and am welly satisfied.now gastric is fully cleared.”
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h4 class="font-semibold text-green-800">Anandan A</h4>
+                                    <span class="text-sm text-gray-500">Chennai</span>
+                                </div>
+                                <div class="text-yellow-400">★★★★★</div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="testimonial-card">
+                            <p class="text-gray-700 mb-6">
+                            “My son 5years old, he had severe cold and calf for a long tym,we go for lot of medicine finally came to alma with anitha mam, 
+                            she suggest only one adadhodai syrup ,very very good result toy son, a very big thanks to dr.anitha mam.🙏2”
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h4 class="font-semibold text-green-800">Seenu Seenu</h4>
+                                    <span class="text-sm text-gray-500">Coimbatore</span>
+                                </div>
+                                <div class="text-yellow-400">★★★★☆</div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="testimonial-card">
+                            <p class="text-gray-700 mb-6">
+                            “Almaa siddha medicine is very good. Five months i have taken diabetes treatment.
+                             After 5 months my sugar lavel comes to normal. I met Md sir thro Miss Anitha Dr hosur. 
+                             Thanks to Md sir of Almaa. I recommend highly on Almaa.”
+                            </p>
+                            <div class="flex items-center justify-between">
+                            <div>
+                                <h4 class="font-semibold text-green-800">Daniel S</h4>
+                                <span class="text-sm text-gray-500">Tamil Nadu</span>
+                            </div>
+                            <div class="text-yellow-400">★★★★★</div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4-->
+                        <div class="testimonial-card">
+                            <p class="text-gray-700 mb-6">
+                            “Recently i visited Alma siddha care clinic hosur. I was very oscillation before visiting.. 
+                            She provided me good consulting and medicine related to my health issues. Now i am feeling better.”
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h4 class="font-semibold text-green-800">Archana Anbalagan</h4>
+                                    <span class="text-sm text-gray-500">Tamil Nadu</span>
+                                </div>
+                                <div class="text-yellow-400">★★★★☆</div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="testimonial-card">
+                            <p class="text-gray-700 mb-6">
+                            “Dr. Anitha madam is one of the best Doctor in Hosur,Hospitality and medical counselling excellent 
+                            treatments at High standrad.. Medicine with good result wishing entire almaa siddha team for good service”
+                            </p>
+                            <div class="flex items-center justify-between">
+                            <div>
+                                <h4 class="font-semibold text-green-800">Anand Thuyamani</h4>
+                                <span class="text-sm text-gray-500">Tamil Nadu</span>
+                            </div>
+                            <div class="text-yellow-400">★★★★★</div>
+                            </div>
+                        </div>
+                        <!-- Card 6 -->
+                        <div class="testimonial-card">
+                            <p class="text-gray-700 mb-6">
+                            “I have been using mudi thailam for the past three years. It gives good results for hair growing and control hair falls.”
+                            </p>
+                            <div class="flex items-center justify-between">
+                            <div>
+                                <h4 class="font-semibold text-green-800">Thiruthuvaraj J</h4>
+                                <span class="text-sm text-gray-500">Tamil Nadu</span>
+                            </div>
+                            <div class="text-yellow-400">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-gradient-to-b from-green-50 to-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Heading -->
+                        <div class="flex flex-col items-center mb-4 md:mb-20">
+                            <div class="flex justify-center items-center gap-3 ">
+                                <div class="w-[50px] h-[3px] bg-primary rounded-2xl "></div>
+                                <h2 class="text-3xl md:text-5xl font-bold font-heading text-center">Contact Us</h2>
+                                <div class="w-[50px] h-[3px] bg-primary rounded-2xl "></div>
+                            </div>
+                            <p class=" mt-5 md:mt-2 text-sm md:text-base text-gray-600 mb-3 font-semibold text-center">We’re here to help your healing journey 🌿</p>
+                        </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+
+            <!-- CONTACT FORM -->
+            <div class="bg-white shadow-xl rounded-3xl p-8 md:p-10">
+
+                <form id="contactForm" class="space-y-5">
+
+                <div>
+                    <label class="text-sm font-medium text-green-900">Full Name</label>
+                    <input type="text" required
+                    class="w-full mt-1 p-3 rounded-lg border border-green-200 focus:ring-2 focus:ring-green-500 outline-none">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                    <label class="text-sm font-medium text-green-900">Phone</label>
+                    <input type="tel" required
+                        class="w-full mt-1 p-3 rounded-lg border border-green-200 focus:ring-2 focus:ring-green-500 outline-none">
+                    </div>
+
+                    <div>
+                    <label class="text-sm font-medium text-green-900">Email</label>
+                    <input type="email" required
+                        class="w-full mt-1 p-3 rounded-lg border border-green-200 focus:ring-2 focus:ring-green-500 outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="text-sm font-medium text-green-900">Message</label>
+                    <textarea rows="4" required
+                    class="w-full mt-1 p-3 rounded-lg border border-green-200 focus:ring-2 focus:ring-green-500 outline-none"></textarea>
+                </div>
+
+                <button
+                    class="w-full bg-green-700 hover:bg-green-600 text-white py-4 rounded-full font-medium transition duration-300 hover:shadow-lg hover:scale-[1.02]">
+                    Send Message
+                </button>
+
+                <p id="successMsg" class="hidden text-green-700 font-medium text-center">
+                    🌿 Thank you! We'll contact you soon.
+                </p>
+
+                </form>
+            </div>
+
+            <!-- MAP -->
+            <div class="rounded-3xl overflow-hidden shadow-xl h-[500px]">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d485.89702549023906!2d80.22468991043931!3d13.024448637973173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526655c38d2993%3A0x54b714477f05829b!2sAlmaa%20Siddha%20Care%20Multispeciality%20Hospital!5e0!3m2!1sen!2sin!4v1771222747276!5m2!1sen!2sin"
+                class="w-full h-full border-0"
+                loading="lazy">
+                </iframe>
+            </div>
+
+            </div>
+        </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-green-100 py-10">
+        <div class="max-w-7xl mx-auto px-6 ">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class=" p-3">
+                    <h4 class="font-semibold mb-5 text-xl text-white ">Quick Links</h4>
+                    <ul class="grid grid-cols-2 gap-2">
+                        <li class="hover:text-white hover:scale-105 hoverEffect"><a href="./index.html#home" class="text-sm md:text-base ">Home</a></li>
+                        <li class="hover:text-white hover:scale-105 hoverEffect"><a href="./index.html#about" class="text-sm md:text-base ">About</a></li>
+                        <li class="hover:text-white hover:scale-105 hoverEffect"><a href="./index.html#benefits" class="text-sm md:text-base ">Benefits</a></li>
+                        <li class="hover:text-white hover:scale-105 hoverEffect"><a href="./index.html#ingredients" class="text-sm md:text-base ">Ingredients</a></li>
+                        <li class="hover:text-white hover:scale-105 hoverEffect"><a href="./index.html#products" class="text-sm md:text-base ">Products</a></li>
+                        <li class="hover:text-white hover:scale-105 hoverEffect"><a href="./index.html#how-to-use" class="text-sm md:text-base ">How To Use</a></li>
+                    </ul>
+                </div>
+                <div class="p-3">
+                    <h4 class="font-semibold mb-5 text-xl text-white ">Policies</h4>
+                    <div class="">
+                        <a href="https://www.almaherbal.com/shipping-policy" target="_blank" class="text-sm md:text-base  flex gap-1 items-center hover:text-white hover:scale-105 hoverEffect mb-2">Shipping
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M240-192q-50 0-85-35t-35-85H48v-408q0-29.7 21.15-50.85Q90.3-792 120-792h552v144h120l120 168v168h-72q0 50-35 85t-85 35q-50 0-85-35t-35-85H360q0 50-35 85t-85 35Zm0-72q20.4 0 34.2-13.8Q288-291.6 288-312q0-20.4-13.8-34.2Q260.4-360 240-360q-20.4 0-34.2 13.8Q192-332.4 192-312q0 20.4 13.8 34.2Q219.6-264 240-264ZM120-384h24q17-23 42-35.5t54-12.5q29 0 54 12.5t41.53 35.5H600v-336H120v336Zm600 120q20.4 0 34.2-13.8Q768-291.6 768-312q0-20.4-13.8-34.2Q740.4-360 720-360q-20.4 0-34.2 13.8Q672-332.4 672-312q0 20.4 13.8 34.2Q699.6-264 720-264Zm-48-192 168-1-85-119h-83v120Zm-310-93Z"/></svg>
+                        </a>
+                        <a href="https://www.almaherbal.com/returns-&-refund-policy" target="_blank" class="text-sm md:text-base  flex gap-1 items-center hover:text-white hover:scale-105 hoverEffect mb-2">
+                            Return & Refund Policy
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="m474-210 102-102-101-102-34 34 42 43q-29 0-56.5-10T378-378q-20-20-31-46.5T336-480q0-16 3-31t9-29l-35-35q-12 22-18.5 45.5T288-480q0 38 14.5 73.5T344-344q29 29 64.5 42.5T484-288l-44 44 34 34Zm173-175q12-22 18.5-45.5T672-480q0-38-15-73.5T615-616q-28-28-65-41.5T474-670l46-46-34-34-102 102 102 102 34-34-44-44q31 0 57.5 10t48.5 32q20 20 31 46.5t11 55.5q0 16-3 31t-9 29l35 35ZM480-96q-79 0-149-30t-122.5-82.5Q156-261 126-331T96-480q0-80 30-149.5t82.5-122Q261-804 331-834t149-30q80 0 149.5 30t122 82.5Q804-699 834-629.5T864-480q0 79-30 149t-82.5 122.5Q699-156 629.5-126T480-96Zm0-72q130 0 221-91t91-221q0-130-91-221t-221-91q-130 0-221 91t-91 221q0 130 91 221t221 91Zm0-312Z"/></svg>
+                        </a>
+                        <a href="https://www.almaherbal.com/terms-&-conditions" target="_blank" class="text-sm md:text-base  flex gap-1 items-center hover:text-white hover:scale-105 hoverEffect mb-2">
+                            Terms & Conditions
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M240-96q-40 0-68-28t-28-68v-144h96v-528h576v660q0 45-31.5 76.5T708-96H240Zm467.79-72q15.21 0 25.71-10.35T744-204v-588H312v456h360v132q0 15.3 10.29 25.65Q692.58-168 707.79-168ZM360-600v-72h336v72H360Zm0 120v-72h336v72H360ZM240-168h360v-96H216v72q0 10.2 6.9 17.1 6.9 6.9 17.1 6.9Zm0 0h-24 384-360Z"/></svg>
+                        </a>
+                        <a href="https://www.almaherbal.com/privacy-policy" target="_blank" class="text-sm md:text-base  flex gap-1 items-center hover:text-white hover:scale-105 hoverEffect mb-2">
+                            Privacy Policy
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M480-96q-136-38-212-160t-76-259v-229l288-120 288 120v229q0 72-22 147t-71 134L553.14-356Q536-345 518-340.5t-38 4.5q-60 0-102-42t-42-102q0-60 42-102t102-42q60 0 102 42t42 102q0 20-5 38.11T604-407l55 55q17-39 27-80t10-83v-181l-216-90-216 90v181q0 105 56.5 203.5T480-171q28-9 51.5-25t44.5-36l51 52q-32 29-68.5 51T480-96Zm.21-312Q510-408 531-429.21t21-51Q552-510 530.79-531t-51-21Q450-552 429-530.79t-21 51Q408-450 429.21-429t51 21Zm-.21-72Z"/></svg>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class=" p-3">
+                    <h4 class="font-semibold mb-5 text-xl text-white">Contact</h4>
+                    <p class="text-sm mb-2"> almaahospital@gmail.com</p>
+                    <p class="text-sm mb-2">+91 7401 403000</p>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B917401403037&text&type=phone_number&app_absent=0" class="text-sm flex gap-2 items-center hover:text-white" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="currentColor" class="w-4 h-4 ">
+                            <path d="M20.52 3.48A11.82 11.82 0 0012.05 0C5.43 0 .05 5.38.05 12c0 2.11.55 4.17 1.6 5.99L0 24l6.17-1.62A11.9 11.9 0 0012.05 24C18.67 24 24.05 18.62 24.05 12c0-3.17-1.23-6.16-3.53-8.52zM12.05 21.82a9.77 9.77 0 01-4.97-1.36l-.35-.21-3.66.96.98-3.57-.23-.37a9.76 9.76 0 01-1.49-5.27c0-5.41 4.41-9.82 9.82-9.82 2.62 0 5.08 1.02 6.93 2.88a9.72 9.72 0 012.89 6.94c0 5.41-4.41 9.82-9.82 9.82zm5.39-7.35c-.3-.15-1.76-.87-2.03-.97-.27-.1-.46-.15-.66.15-.19.3-.76.97-.93 1.17-.17.2-.34.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.91-2.2-.24-.58-.49-.5-.66-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.49s1.08 2.89 1.23 3.09c.15.2 2.12 3.23 5.14 4.53.72.31 1.28.49 1.71.63.72.23 1.38.2 1.9.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35z"/>
+                        </svg>
+                        <span>+91 74014 03037</span>
+                    </a>
+                </div>
+                <div class="p-3">
+                    <h4 class="font-semibold mb-5 text-xl text-white">Social Links</h4>
+                    <div class="flex gap-2">
+                        <!-- instagram  -->
+                        <a href="https://www.instagram.com/accounts/login/?next=%2Falmaaherbalnature%2F&source=omni_redirect" aria-label="Instagram" target="_blank" class="p-1 bg-white rounded-full hover:bg-primary  text-primary hover:text-white hoverEffect">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="w-6 h-6 ">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="17" cy="7" r="1.2"fill="currentColor"/>
+                        </svg>
+                        </a>
+                        <!-- X twitter  -->
+                        <a href="https://x.com/almaaherbal_" target="_blank" class="p-1 bg-white rounded-full hover:bg-primary text-primary hover:text-white hoverEffect ">
+                        <svg  viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 ">
+                            <path d="M18.24 2H21l-6.46 7.39L22 22h-6.78l-5.3-6.88L3.9 22H1.14l6.92-7.9L2 2h6.9l4.8 6.24L18.24
+                            2zm-1.19 18h1.88L7.02 4h-2L17.05 20z"/>
+                        </svg>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/almaherbal"  aria-label="Facebook" target="_blank" class="p-1 bg-white rounded-full hover:bg-primary text-primary hover:text-white hoverEffect">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 ">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7
+                            c0-1.1.9-2 2-2h3z"/>
+                        </svg>
+                        </a>
+                        <!-- Youtube -->
+                        <a href="https://www.youtube.com/@almaaherbalnature"  target="_blank" class="p-1 bg-white rounded-full hover:bg-primary text-primary hover:text-white hoverEffect">
+                            <svg   viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 ">
+                            <path d="M23.5 6.2s-.2-1.7-.9-2.4c-.8-.9-1.7-.9-2.1-1C17.6 2.5 12 2.5 12 2.5h0s-5.6 0-8.5.3c-.4.1-1.3.1-2.1 1
+                                -.7.7-.9 2.4-.9 2.4S0 8.1 0 10v2c0 1.9.5 3.8.5 3.8s.2 1.7.9 2.4c.8.9 1.9.9 2.4 1
+                                1.7.2 7.2.3 8.2.3 0 0 5.6 0 8.5-.3.4-.1 1.3-.1 2.1-1
+                                .7-.7.9-2.4.9-2.4S24 13.9 24 12v-2c0-1.9-.5-3.8-.5-3.8zM9.5 14.5v-5l5 2.5-5 2.5z"/>
+                            </svg>
                         </a>
                     </div>
-
                 </div>
+            </div>
+            <div class="mt-10 p-5 md:flex md:justify-between border-t text-center">
+                <p>© 2026 Almaa Herbal Nature Pvt Ltd</p>
+                <p>All rights reserved.</p>
             </div>
         </div>
+    </footer>
+
+    <script>
+        // ================ FAQ Section Java Script ==========================
+    document.addEventListener("DOMContentLoaded", function () {
+    const questions = document.querySelectorAll(".faq-question");
+
+    questions.forEach(btn => {
+        btn.addEventListener("click", () => {
+        const item = btn.parentElement;
+
+        // Close others
+        document.querySelectorAll(".faq-item").forEach(faq => {
+            if (faq !== item) faq.classList.remove("active");
+        });
+
+        // Toggle current
+        item.classList.toggle("active");
+        });
+    });
+    });
+    // ========================= benefits =========================
+    const reveals = document.querySelectorAll(".reveal");
+    const zoomReveals = document.querySelectorAll(".z-reveal");
+
+    function revealOnScroll() {
+        reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const revealPoint = 100;
+
+        if (elementTop < windowHeight - revealPoint) {
+            el.classList.add("active");
+        }
+        });
+
+         zoomReveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const revealPoint = 100;
+
+        if (elementTop < windowHeight - revealPoint) {
+            el.classList.add("active");
+        }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
 
 
-    </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="py-20 bg-white overflow-hidden ">
-        
-        <div class="max-w-7xl mx-auto ">
-            <!-- Heading -->
-        <div class="text-center ">
-            <h2 class="text-3xl md:text-4xl font-bold mb-3">About</h2>
-            <h1 class="text-5xl md:text-5xl font-bold text-green-700 mb-10">ALMAA ULCER CARE COMBO 
-            </h1>
-        </div>
-            <!-- Content -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ">
+    
+    </script>
 
-                <!-- Image -->
-                <div class="flex justify-center">
-                    <div class="relative">
-                    <img
-                        src="./assets/slider_img-removebg-preview.png"
-                        alt="Almaa Arthritis Pain Relief"
-                        class="w-[260px] sm:w-[320px] md:w-[420px] lg:w-[480px]
-                            animate-float"
-                    />
-
-                    <!-- Soft natural glow -->
-                    <div class="absolute inset-0 bg-green-400/10 blur-3xl -z-10"></div>
-                    </div>
-                </div>
-
-                <!-- Text -->
-                <div class="text-gray-700 text-base md:text-lg leading-relaxed">
-
-                    <p class="mb-6">
-                    <strong class="text-green-800">Almaa ulcer Care Combo</strong> helps in the 
-                    regeneration of ulcerated tissue and reduces the damage to the intestinal mucosa.
-                    </p>
-
-                    <p class="mb-6">
-                    Almaa ulcer care combo contains natural herbal plants of 
-                    high-grade quality. Reduce the pain and support digestion, 
-                    acts as a coolant, and heals the affected area.
-                    </p>
-
-                    <p>
-                    Enhances
-                    <span class="text-green-800 font-medium">
-                         digestive function, reducing symptoms like nausea, sour belching, and heaviness. Heals intestinal and gastric ulcers 
-                    </span>.
-                    </p>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--Benefits -->
-    <section id="benefits" class="py-32 bg-gradient-to-b from-white to-green-50">
-        <div class="max-w-7xl mx-auto ">
-            <h2 class="text-5xl text-center py-10 font-bold mb-5">Key Benefits</h2>
-            
-            <div class="mt-10 ">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 p-10 md:p-3">
-                <div class=" text-center flex flex-col items-center gap-5 p-3  bg-white  group hoverEffect rounded-lg">
-                    <img src="./assets/benefits-image/pranoshakti1.png" alt="" class="w-[200px] h-[200px] rounded-lg mb-5  group-hover:scale-105 hoverEffect" >
-                    <p class="font-semibold text-green-700">Promotes Ulcer Healing</p>
-                    <p class="text-sm text-gray-500"> Helps in the regeneration of ulcerated tissue, reduces the damage to the intestinal mucosa </p>
-                </div>
-                <div class="text-center flex flex-col items-center gap-5 p-3  bg-white group hoverEffect rounded-lg">
-                    <img src="./assets/benefits-image/pranoshakti2.png" alt="" srcset="" class="w-[200px] h-[200px] rounded-lg mb-5 group-hover:scale-105 hoverEffect">
-                    <p class="font-semibold text-green-700">Protects Stomach Lining</p>
-                    <p class="text-sm text-gray-500">prevents the erosion of the tissue  caused by acid and digestive enzymes by strengthening the mucosal barrier</p>
-                </div>
-                <div class="text-center flex flex-col items-center gap-5 p-3 bg-white hover:shadow group hoverEffect rounded-lg">
-                    <img src="./assets/benefits-image/pranoshakti3.png" alt="" class="w-[200px] h-[200px] rounded-lg mb-5 group-hover:scale-105 hoverEffect">
-                    <p class="font-semibold text-green-700">Improves Digestion </p>
-                    <p class="text-sm text-gray-500">Enhances digestive function, reducing  symptoms like nausea, sour belching, and heaviness</p>
-                </div>
-                <!-- <div class="text-center flex flex-col items-center gap-5 p-3 bg-white hover:shadow group hoverEffect rounded-lg">
-                    <img src="./assets/benefits-image/pranoshakti4.png" alt="" srcset="" class="w-[200px] h-[200px] rounded-lg mb-5 group-hover:scale-105 hoverEffect">
-                    <p class="font-semibold text-green-700">Enhance Performance</p>
-                    <p class="text-sm text-gray-500">Designed to help elevate endurance, focus, and overall performance.</p>
-                </div> -->
-            </div>
-            </div>
-        </div>
-    </section>
-    <!-- ingredients-->
-    <section id="ingredients" class="py-32 bg-white">
-        <div class="max-w-7xl mx-auto ">
-            <h2 class="text-5xl text-center mb-2 font-bold mb-5">Key Ingredients</h2>
-            <h1 class="text-3xl text-center mb-5 head-text">What's inside that really matters</h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-7 py-20 p-5 ">
-                <div class="flex items-center gap-4  p-5 rounded-lg ">
-                    <div class="rounded-full border-[3px] border-green-800  w-[150px] md:w-[170px] ">
-                        <img src="./assets/herb_bhringraj.png" alt="" srcset="" class=" rounded-full hover:scale-105 hoverEffect">
-                    </div>
-                    <div>
-                        <h2 class="text-lg md:text-2xl text-green-800 mb-2">Nelli vattra</h2>
-                        <p class="text-xs md:text-base">Antioxidant</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-4 p-5">
-                    <div class="rounded-full border-[3px] border-green-800 w-[150px] md:w-[170px] ">
-                        <img src="./assets/herb_bhumyamalaki.png" alt="" srcset="" class=" rounded-full hover:scale-105 hoverEffect">
-                    </div>
-                    <div>
-                        <h2 class="text-lg md:text-2xltext-green-800 mb-2">Ommam </h2>
-                        <p class="text-xs md:text-base">Cooling effect on the stomach.</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-4 p-5">
-                    <div class="rounded-full border-[3px] border-green-800  w-[150px] md:w-[170px]  ">
-                        <img src="./assets/herb_kalmegh.png" alt="" srcset="" class=" rounded-full hover:scale-105 hoverEffect">
-                    </div>
-                    <div>
-                        <h2 class="text-lg md:text-2xl text-green-800 mb-2">Sundai Vattral </h2>
-                        <p class="text-xs md:text-base">Strengthens gastric tissues</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-4 p-5">
-                    <div class="rounded-full border-[3px] border-green-800  w-[150px] md:w-[170px] ">
-                        <img src="./assets/herb_kasani.png" alt="" srcset="" class=" rounded-full hover:scale-105 hoverEffect">
-                    </div>
-                    <div>
-                        <h2 class="text-lg md:text-2xl text-green-800 mb-2">Seeragam </h2>
-                        <p class="text-xs md:text-base"> Heals intestinal and gastric ulcers</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- products -->
-    <section id="product" class="py-32 bg-gradient-to-b from-white to-green-50">
-        <div class="max-w-7xl mx-auto px-4">
-
-            <h2 class="text-5xl md:text-5xl font-bold text-center mb-20 text-green-700">
-                ALMAA ULCER CARE COMBO 
-            </h2>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-1 items-start">
-
-               <div>
-                    <!-- MAIN IMAGE -->
-                    <div class="relative rounded-2xl overflow-hidden group p-5">
-                        <img id="mainImage"
-                            src="./assets/product_lifestyle-removebg-preview.png"
-                            class="w-full h-[380px] object-contain transition-all duration-700 ease-in-out cursor-pointer"
-                            alt="Product Image"/>
-                    </div>
-
-                    <!-- THUMBNAILS -->
-                    <div class="flex gap-4 justify-center mt-6">
-                        <img src="./assets/product_lifestyle-removebg-preview.png"
-                            class="thumb active-thumb"
-                            onclick="changeImage(this)" />
-
-                        <img src="./assets/Asthma Wheezing Combo 01.webp"
-                            class="thumb"
-                            onclick="changeImage(this)" />
-
-                        <img src="./assets/Diabetes Care Combo 01 .webp"
-                            class="thumb"
-                            onclick="changeImage(this)" />
-
-                        <img src="./assets/Gallbladder  Stone Combo.webp"
-                            class="thumb"
-                            onclick="changeImage(this)" />
-                    </div>
-               </div>
-
-
-            <!-- RIGHT: Product Info -->
-            <div class="bg-white/70 backdrop-blur-xl rounded-2xl p-8 shadow-lg">
-
-                <h3 class="text-2xl md:text-3xl font-semibold mb-4">
-                ALMAA ULCER CARE COMBO 
-                </h3>
-
-                <p class="text-gray-600 leading-relaxed mb-6">
-                    Almaa Ulcer Care Combo helps to reduce the gastric irritation, control nausea, and act as a natural coolant for heartburn 
-                </p>
-
-                <!-- Rating -->
-                <div class="flex items-center gap-3 mb-6">
-                <div class="flex text-yellow-400">
-                    ★★★★☆
-                </div>
-                <span class="text-green-800 font-medium">(100 Reviews)</span>
-                </div>
-
-                <!-- Price -->
-                <div class="flex items-end gap-4 mb-8">
-                    <span class="text-3xl font-bold text-green-800">₹2107.00</span>
-                    <span class="line-through text-green-800/50 text-lg">₹2200</span>
-                    <span class="text-sm text-green-700 bg-green-100 px-3 py-1 rounded-full">
-                        Save ₹93
-                    </span>
-                </div>
-
-                <!-- Quantity -->
-                <div class="flex items-center gap-6 mb-10">
-                    <span class="font-medium">Quantity</span>
-                    <div class="flex items-center border rounded-full overflow-hidden">
-                        <button onclick="updateQty(-1)" class="qty-btn">−</button>
-                        <span id="qty" class="px-6">1</span>
-                        <button onclick="updateQty(1)" class="qty-btn">+</button>
-                    </div>
-                </div>
-
-                <!-- CTA -->
-                
-                <a href="/buy.html" class="w-32 bg-green-800 text-white px-10 py-2 rounded-xl hover:bg-green-600 hover:shadow hover:shadow-green-300  hoverEffect">
-                    Buy Now 
-                </a>
-
-            </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How to use  -->
-    <section id="how-to-use" class="py-40 bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4">
-            <!-- Heading -->
-            <div class="text-center mb-20">
-            <h2 class="text-3xl font-bold py-3">HOW TO USE</h2>
-            <h2 class="text-5xl font-bold text-green-800">
-                ALMAA ULCER CARE COMBO
-            </h2>
-            <p class="text-gray-600 mt-4">
-                Simple steps. Natural healing. Lasting relief.
-            </p>
-            </div>
-            <!-- Flow Wrapper -->
-            <div class="relative flex flex-col lg:flex-row items-center justify-between gap-7 ">
-            <!-- Step 1 -->
-            <div class=" flow-card animate-fade-up">
-                <img src="./assets/Arthritis Care Combo 01.webp" class="w-25 mx-auto mb-4" />
-                <h3 class="text-base font-semibold"> Ulcer Chooranam</h3>
-                <p class="text-gray-600 text-sm mt-2 ">
-                 Mix 1 teaspoon in warm water and take in the Morning & evening before food.
-                </p>
-            </div>
-
-            <!-- Arrow -->
-            <div class="flow-arrow-desktop hidden lg:flex">➜</div>
-            <div class="flow-arrow-mobile flex lg:hidden">⬇</div>
-
-            <!-- Step 2 -->
-            <div class="flow-card animate-fade-up delay-150">
-                <img src="./assets/Arthritis Care Combo 01.webp" class="w-25 mx-auto mb-4" />
-                <h3 class="text-base font-semibold"> Sundaivatral Chooranam</h3>
-                <p class="text-gray-600 text-sm mt-2">
-                    Mix 1 teaspoon in water after food in the morning & night.
-                </p>
-            </div>
-            
-            <!-- Arrow -->
-            <div class="flow-arrow-desktop hidden lg:flex">➜</div>
-            <div class="flow-arrow-mobile flex lg:hidden">⬇</div>
-
-            <!-- Video -->
-            <div class="relative animate-scale-up delay-300">
-                <div class="rounded-2xl overflow-hidden shadow-xl border">
-                <video 
-                    src="./assets/4323009-hd_720_1366_50fps.mp4"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                    class="w-[300px] h-[380px] object-cover" ></video>
-                </div>
-                <span class="w-32 absolute -top-8 left-1/2 -translate-x-1/2  text-green-800 text-lg text-center py-2 font-semibold rounded-full">
-                Watch & Use
-                </span>
-            </div>
-
-            <!-- Arrow -->
-            <div class="flow-arrow-desktop hidden lg:flex">➜</div>
-            <div class="flow-arrow-mobile flex lg:hidden">⬇</div>
-
-            <!-- Step 3 -->
-            <div class="flow-card animate-fade-up delay-500">
-                <img src="./assets/Arthritis Care Combo 01.webp" class="w-25 mx-auto mb-4" />
-                <h3 class="text-lg font-semibold">Follow consistently</h3>
-                <p class="text-gray-600 text-sm mt-2">
-                 for best results, along with light, easily digestible food.
-                </p>
-            </div>
-
-            <!-- Arrow -->
-            <div class="flow-arrow-desktop hidden lg:flex">➜</div>
-            <div class="flow-arrow-mobile flex lg:hidden">⬇</div>
-
-            <!-- Step 4 -->
-            <div class="flow-card animate-fade-up delay-700">
-                <img src="./assets/Arthritis Care Combo 01.webp" class="w-25 mx-auto mb-4" />
-                <h3 class="text-lg font-semibold">Use Daily</h3>
-                <p class="text-gray-600 text-sm mt-2">
-                Morning & night for best results
-                </p>
-            </div>
-            </div>
-        </div>
-    </section>
-    <!-- FAQ Section  -->
-    <section id="faq" class="py-32 bg-gradient-to-t from-green-50 to-white">
-        <div class="max-w-5xl mx-auto px-6">
-
-            <!-- Heading -->
-            <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-3">Frequently Asked Questions</h2>
-            <p class="text-gray-600">
-                Everything you need to know about our natural arthritis solution
-            </p>
-            </div>
-
-            <!-- FAQ Items -->
-            <div class="space-y-6">
-
-            <!-- FAQ 1 -->
-            <div class="faq-item">
-                <button class="faq-question">
-                    Which is the best medicine for an ulcer ?
-                <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                <p>
-                   Almma Ulcer Care combo offer uses the best medicine for ulcers. 
-                   This medicine has ingredients that contain Nelli Vattral, Ommam,
-                   Sundai Vattral, Seeragam, etc. that help to heal and act as a coolant in the gastric.
-                </p>
-                </div>
-            </div>
-
-            <!-- FAQ 2 -->
-            <div class="faq-item">
-                <button class="faq-question">
-                   Natural way to treat an ulcer ?
-                <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                <p>
-                   The natural way treat ulceris to take Almaa ulcer care medicine combo, as per the physician's advice
-                </p>
-                </div>
-            </div>
-
-            <!-- FAQ 3 -->
-            <div class="faq-item">
-                <button class="faq-question">
-                    How to control a gastric ulcer ?
-                <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                <p>
-                    Ulcer has a complication which occur Vomiting blood, severe abdominal pain, 
-                    and persistent vomiting, the only way to controls is to consult a professional physician. 
-                    As per the advice, you can take Almaa Ulcer Care combo
-                </p>
-                </div>
-            </div>
-
-            <!-- FAQ 4 -->
-            <div class="faq-item">
-                <button class="faq-question">
-                    What are the common remedies for an ulcer?
-                <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                <p>
-                    A. <span class="text-green-800 font-semibold">soft, non-spicy, low-fat foods.</span> Consistently add in your diet along with Almaa pile care combo as per doctors advice. 
-                </p>
-                </div>
-            </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- Testimonial section -->
-    <section id="testimonials" class="py-32 bg-white overflow-hidden">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <!-- Heading -->
-    <div class="text-center mb-20">
-      <h2 class="text-3xl md:text-4xl font-bold mb-3">What Our Customers Say</h2>
-      <p class="text-gray-600">
-        Real experiences from people who found natural relief
-      </p>
-    </div>
-
-    <!-- Overall Rating -->
-    <div class="flex flex-col items-center mb-16">
-      <div class="flex text-yellow-400 text-3xl mb-2">
-        ★ ★ ★ ★ ☆
-      </div>
-      <p class="text-green-800 font-semibold text-lg">
-        4.8 / 5 Average Rating
-      </p>
-      <p class="text-sm text-gray-500">
-        Based on 100+ verified users
-      </p>
-    </div>
-
-    <!-- ROW 1 (Move Right) -->
-    <div class="testimonial-row move-right ">
-      <div class="testimonial-track">
-            
-                <!-- Card 1 -->
-                <div class="testimonial-card ">
-                    <p class="text-gray-700 mb-6">
-                        “I was worried about side effects, but this herbal solution felt very
-                        gentle and effective. Morning stiffness is much less now.”
-                    </p>
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <h4 class="font-semibold text-green-800">Ramesh Kumar</h4>
-                            <span class="text-sm text-gray-500">Chennai</span>
-                        </div>
-                        <div class="text-yellow-400">★★★★★</div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="testimonial-card">
-                    <p class="text-gray-700 mb-6">
-                    “I was worried about side effects, but this herbal solution felt very
-                    gentle and effective. Morning stiffness is much less now.”
-                    </p>
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <h4 class="font-semibold text-green-800">Lakshmi Devi</h4>
-                            <span class="text-sm text-gray-500">Coimbatore</span>
-                        </div>
-                        <div class="text-yellow-400">★★★★☆</div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="testimonial-card">
-                    <p class="text-gray-700 mb-6">
-                    “I work long hours standing. This product helped reduce joint pain
-                    naturally without making me drowsy.”
-                    </p>
-                    <div class="flex items-center justify-between">
-                    <div>
-                        <h4 class="font-semibold text-green-800">Suresh Patel</h4>
-                        <span class="text-sm text-gray-500">Bangalore</span>
-                    </div>
-                    <div class="text-yellow-400">★★★★★</div>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="testimonial-card">
-                    <p class="text-gray-700 mb-6">
-                    “I work long hours standing. This product helped reduce joint pain
-                    naturally without making me drowsy.”
-                    </p>
-                    <div class="flex items-center justify-between">
-                    <div>
-                        <h4 class="font-semibold text-green-800">Suresh Patel</h4>
-                        <span class="text-sm text-gray-500">Bangalore</span>
-                    </div>
-                    <div class="text-yellow-400">★★★★★</div>
-                    </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="testimonial-card">
-                    <p class="text-gray-700 mb-6">
-                    “I work long hours standing. This product helped reduce joint pain
-                    naturally without making me drowsy.”
-                    </p>
-                    <div class="flex items-center justify-between">
-                    <div>
-                        <h4 class="font-semibold text-green-800">Suresh Patel</h4>
-                        <span class="text-sm text-gray-500">Bangalore</span>
-                    </div>
-                    <div class="text-yellow-400">★★★★★</div>
-                    </div>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="testimonial-card">
-                    <p class="text-gray-700 mb-6">
-                    “I work long hours standing. This product helped reduce joint pain
-                    naturally without making me drowsy.”
-                    </p>
-                    <div class="flex items-center justify-between">
-                    <div>
-                        <h4 class="font-semibold text-green-800">Suresh Patel</h4>
-                        <span class="text-sm text-gray-500">Bangalore</span>
-                    </div>
-                    <div class="text-yellow-400">★★★★★</div>
-                    </div>
-                </div>
-            
-      </div>
-    </div>
-
-    <!-- ROW 2 (Move Left) -->
-    <div class="testimonial-row move-left mt-10">
-        <div class="testimonial-track">
-            <!-- Card 1 -->
-            <div class="testimonial-card ">
-                <p class="text-gray-700 mb-6">
-                    “I was worried about side effects, but this herbal solution felt very
-                    gentle and effective. Morning stiffness is much less now.”
-                </p>
-                <div class="flex items-center justify-between">
-                    <div>
-                        <h4 class="font-semibold text-green-800">Ramesh Kumar</h4>
-                        <span class="text-sm text-gray-500">Chennai</span>
-                    </div>
-                    <div class="text-yellow-400">★★★★★</div>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="testimonial-card">
-                <p class="text-gray-700 mb-6">
-                “I was worried about side effects, but this herbal solution felt very
-                gentle and effective. Morning stiffness is much less now.”
-                </p>
-                <div class="flex items-center justify-between">
-                    <div>
-                        <h4 class="font-semibold text-green-800">Lakshmi Devi</h4>
-                        <span class="text-sm text-gray-500">Coimbatore</span>
-                    </div>
-                    <div class="text-yellow-400">★★★★☆</div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="testimonial-card">
-                <p class="text-gray-700 mb-6">
-                “I work long hours standing. This product helped reduce joint pain
-                naturally without making me drowsy.”
-                </p>
-                <div class="flex items-center justify-between">
-                <div>
-                    <h4 class="font-semibold text-green-800">Suresh Patel</h4>
-                    <span class="text-sm text-gray-500">Bangalore</span>
-                </div>
-                <div class="text-yellow-400">★★★★★</div>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="testimonial-card">
-                <p class="text-gray-700 mb-6">
-                “I was worried about side effects, but this herbal solution felt very
-                gentle and effective. Morning stiffness is much less now.”
-                </p>
-                <div class="flex items-center justify-between">
-                    <div>
-                        <h4 class="font-semibold text-green-800">Lakshmi Devi</h4>
-                        <span class="text-sm text-gray-500">Coimbatore</span>
-                    </div>
-                    <div class="text-yellow-400">★★★★☆</div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="testimonial-card">
-                <p class="text-gray-700 mb-6">
-                “I work long hours standing. This product helped reduce joint pain
-                naturally without making me drowsy.”
-                </p>
-                <div class="flex items-center justify-between">
-                <div>
-                    <h4 class="font-semibold text-green-800">Suresh Patel</h4>
-                    <span class="text-sm text-gray-500">Bangalore</span>
-                </div>
-                <div class="text-yellow-400">★★★★★</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-  </div>
-</section>
-
-    <button id="backToTop" class="font-semibold text-xl fixed bottom-6 right-6 z-50 hidden w-12 h-12 rounded-full bg-green-700 text-white flex items-center justify-center shadow-lg transition-all duration-300 hover:bg-green-800 hover:scale-110">
-        ↑
-    </button>
-</main>
-
-<!-- Footer -->
-<footer class="bg-green-900 text-green-100 py-10">
-    <div class="max-w-7xl mx-auto px-6 ">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class=" p-3">
-                <h4 class="font-semibold mb-5 text-xl text-white ">Quick Links</h4>
-                <ul class="grid grid-cols-2 gap-1">
-                    <li><a href="#home" class=" nav-text relative">Home</a></li>
-                    <li><a href="#about" class="nav-text relative">About</a></li>
-                    <li><a href="#benefits" class="nav-text relative">Benefits</a></li>
-                    <li><a href="#ingredients" class="nav-text relative">Ingredients</a></li>
-                    <li><a href="#products" class="nav-text relative">Products</a></li>
-                    <li><a href="#how-to-use" class="nav-text relative">How To Use</a></li>
-                    <li><a href="#faq" class="nav-text relative">FAQ</a></li>
-                    <li><a href="#testimonials" class="nav-text relative">Testimonial</a></li>
-                </ul>
-            </div>
-            <div class=" p-3">
-                <h4 class="font-semibold mb-5 text-xl text-white">Contact</h4>
-                <p class="text-sm mb-2"> almaahospital@gmail.com</p>
-                <p class="text-sm">+91 90030 00888</p>
-            </div>
-            <div class="p-3">
-                <h4 class="font-semibold mb-5 text-xl text-white">Social Links</h4>
-                <div class="flex gap-3">
-                    <a href="https://www.instagram.com/almaaherbalnature/" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-6 h-6 text-white hover:text-green-500 transition-colors duration-300">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                            <circle cx="12" cy="12" r="4" />
-                            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
-                        </svg>
-                    </a>
-                    <a href="https://api.whatsapp.com/send/?phone=%2B917401403000&text&type=phone_number&app_absent=0" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none"  stroke="currentColor" stroke-width="2" class="w-6 h-6 text-white hover:text-green-500 transition-colors duration-300">
-                            <path d="M21 11.5a8.38 8.38 0 0 1-1.5 4.7L21 22l-5.8-1.5A8.5 8.5 0 1 1 21 11.5z"/>
-                            <path d="M16.5 13.5c-.3.8-1.6 1.5-2.2 1.6-.6.1-1.3.1-2.1-.2a9.6 9.6 0 0 1-3.4-2.1 8.9 8.9 0 0 1-2.1-3.4c-.3-.8-.3-1.5-.2-2.1.1-.6.8-1.9 1.6-2.2.4-.1.9 0 1.1.3l.8 1.9c.1.3.1.6 0 .8l-.4.7c-.1.2-.1.4 0 .6a6.7 6.7 0 0 0 3.1 3.1c.2.1.4.1.6 0l.7-.4c.2-.1.5-.1.8 0l1.9.8c.3.2.4.7.3 1.1z"/>
-                        </svg>
-                    </a>
-                    <a href="https://x.com/almaaherbal_" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-white hover:text-green-500 transition-colors duration-300">
-                            <path d="M18.9 2H22l-6.9 7.9L22 22h-6.2l-4.9-6.5L5.3 22H2l7.3-8.3L2 2h6.3l4.5 6L18.9 2z"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.facebook.com/almaherbal" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-white hover:text-green-500 transition-colors duration-300">
-                            <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6v1.9H16l-.4 2.9h-2.6v7A10 10 0 0 0 22 12z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="mt-10 p-5 flex justify-between border-t">
-            <p>© 2026 Almaa Herbal Nature Pvt Ltd</p>
-            <p>All rights reserved.</p>
-        </div>
-    </div>
-</footer>
-
-<script src="./script.js"></script>
+    <script src="./script.js"></script>
 
 </body>
 </html>

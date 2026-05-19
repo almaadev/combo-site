@@ -51,71 +51,136 @@ body {
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 2px;
     width: 0;
-    background-color: #07b624;
+    background-color: rgba(255, 254, 254, 0.918);
     transition: width 0.3s ease;
 }
 .nav-text:hover::after{
     width: 100%;
+    height: 1px;
 }
 
+/* REVEAL Zoom  ANIMATION */
+.z-reveal {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: all 0.10s ease-in-out;
+}
 
-.flow-card {
-  width: 270px;
-  padding: 20px;
-  border-radius: 16px;
-  border: 1px solid #e5e7eb;
+.z-reveal.active {
+  opacity: 1;
+  transform: scale(1);
+}
+/* ================== Benefits ======================  */
+
+/* CARD */
+.benefit-card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 22px;
   text-align: center;
-  background: #fff;
-  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  transition: all 0.4s ease;
+  overflow: hidden;
+
 }
+
+.benefit-card h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #044d1f;
+  margin-bottom: 8px;
+}
+
+.benefit-card p {
+  font-size: 0.95rem;
+  color: #55585e;
+  line-height: 1.5;
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-200 { transition-delay: .2s; }
+.delay-400 { transition-delay: .4s; }
+/* ==================== incredeints ============== */
+
+.ingredient-item {
+  position: absolute;
+  width: 120px;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.ingredient-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 999px;
+  border: 2px solid #22c55e;
+  padding: 6px;
+  background: #fff;
+  margin: 0 auto 6px;
+  transition: transform 0.4s ease;
+}
+
+.ingredient-item p {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.ingredient-item:hover img {
+  transform: scale(1.15);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Mobile fallback cards */
+.mobile-ing {
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(34,197,94,0.3);
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ============== how to use ========= */
+
 
 .flow-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  cursor: pointer;
 }
 
-/* Desktop arrow */
-.flow-arrow-desktop {
-  font-size: 36px;
+/* Arrows */
+.flow-arrow {
+  font-size: 34px;
   color: #16a34a;
-  animation: arrowMoveX 1.5s infinite;
+  animation: arrowX 1.5s infinite;
 }
-
-/* Mobile arrow */
 .flow-arrow-mobile {
-  font-size: 32px;
+  font-size: 30px;
   color: #16a34a;
-  margin: 16px 0;
-  animation: arrowMoveY 1.5s infinite;
+  animation: arrowY 1.5s infinite;
 }
 
-/* Animations */
-@keyframes arrowMoveX {
-  0% { transform: translateX(0); opacity: 0.4; }
-  50% { transform: translateX(10px); opacity: 1; }
-  100% { transform: translateX(0); opacity: 0.4; }
-}
-
-@keyframes arrowMoveY {
-  0% { transform: translateY(0); opacity: 0.4; }
-  50% { transform: translateY(10px); opacity: 1; }
-  100% { transform: translateY(0); opacity: 0.4; }
-}
-
-/* Animations */
+/* Entry Animations */
 .animate-fade-up {
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeUp 0.8s ease forwards;
+  animation: fadeUp .8s ease forwards;
 }
-
 .animate-scale-up {
   opacity: 0;
-  transform: scale(0.9);
-  animation: scaleUp 0.8s ease forwards;
+  transform: scale(.9);
+  animation: scaleUp .8s ease forwards;
 }
 
 .delay-150 { animation-delay: .15s; }
@@ -126,52 +191,110 @@ body {
 @keyframes fadeUp {
   to { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes scaleUp {
   to { opacity: 1; transform: scale(1); }
 }
+@keyframes arrowX {
+  0% { transform: translateX(0); opacity:.4 }
+  50% { transform: translateX(10px); opacity:1 }
+  100% { transform: translateX(0); opacity:.4 }
+}
+@keyframes arrowY {
+  0% { transform: translateY(0); opacity:.4 }
+  50% { transform: translateY(10px); opacity:1 }
+  100% { transform: translateY(0); opacity:.4 }
+}
 
-/* product Css  */
- .thumb {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
+/*============  product Css ==================== */
+
+.image-slider-wrapper {
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.image-slider {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease-in-out;
   cursor: pointer;
-  border-radius: 12px;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
-  opacity: 0.6;
 }
 
-.thumb:hover {
+.image-slider img {
+  min-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Thumbs */
+.thumb {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  cursor: pointer;
+  opacity: 0.5;
+  border-radius: 8px;
+}
+
+.thumb.active-thumb {
   opacity: 1;
-  transform: scale(1.05);
+  border: 2px solid #046b43;
 }
 
-.active-thumb {
-  border-color: #15803d; /* green-700 */
+
+/* ZOOM MODAL BACKDROP */
+.zoom-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 10px;
+}
+
+/* ACTIVE STATE */
+.zoom-modal.active {
   opacity: 1;
-  transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(21, 128, 61, 0.35);
+  pointer-events: auto;
+}
+
+/* ZOOM IMAGE */
+.zoom-modal img {
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+/* SCALE IN */
+.zoom-modal.active img {
+  transform: scale(1);
+}
+
+/* CLOSE BUTTON */
+.zoom-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
 }
 
 
-/* FAQ Css */
-
-/* FAQ container */
+/* ============ FAQ Css ==================== */
+/* FAQ Card */
 .faq-item {
-  background: white;
+  background: #ffffff;
   border-radius: 16px;
   border: 1px solid rgba(22, 101, 52, 0.15);
   overflow: hidden;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease-in-out;
 }
-
 .faq-item:hover {
   box-shadow: 0 12px 30px rgba(22, 101, 52, 0.12);
 }
 
-/* Question */
+/* Question Button */
 .faq-question {
   width: 100%;
   padding: 20px 24px;
@@ -189,35 +312,38 @@ body {
 
 /* Icon */
 .faq-icon {
-  font-size: 26px;
+  font-size: 22px;
   color: #16a34a;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Answer */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.3s ease;
   padding: 0 24px;
+  transition: all 0.2s ease-in-out;
   color: #374151;
   line-height: 1.6;
 }
 
-/* Active state */
+/* Active State */
 .faq-item.active .faq-answer {
-  max-height: 300px;
+  max-height: 400px;
   padding: 0 24px 20px;
+  transition: all 0.2 ease-in-out;
 }
 
 .faq-item.active .faq-icon {
-  transform: rotate(45deg);
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
 }
 
-/* Testimonia section css  */
+
+/* ============= Testimonia section css ==================*/
 
 .testimonial-row {
-  overflow: hidden;
+  overflow:hidden;
   width: 100%;
 }
 
@@ -227,7 +353,7 @@ body {
   width: max-content;
 }
 
-/* cards (same as yours, kept animation fadeUp) */
+/* cards  */
 .testimonial-card {
   max-width: 320px;
   height: 300px;
@@ -247,11 +373,11 @@ body {
 
 /* Animations */
 .move-right .testimonial-track {
-  animation: scrollRight 30s linear infinite;
+  animation: scrollRight 25s linear infinite;
 }
 
 .move-left .testimonial-track {
-  animation: scrollLeft 30s linear infinite;
+  animation: scrollLeft 27s linear infinite;
 }
 
 @keyframes scrollRight {
@@ -272,7 +398,12 @@ body {
   }
 }
 
-
+.testimonial-track:hover {
+  animation-play-state: paused;
+}
+.testimonial-track {
+  will-change: transform;
+}
 
 /* checkout page css  */
 
